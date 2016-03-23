@@ -1,0 +1,36 @@
+<html>
+<body>
+<h1>Tim Perry</h1>
+
+<section>
+    <h1>What have I been up to?</h1>
+    <feed id="major-content">
+        <manual-source icon="./blog-icon" source="blog-posts" />
+        <manual-source icon="./talk-icon" source="talks-given" />
+        <manual-source icon="./project-icon" source="project-events" />
+    </feed>
+</section>
+
+<section>
+    <feed id="minor-events">
+        <twitter-source />
+        <github-source include="PullRequest" />
+    </feed>
+</section>
+
+<section>
+    <carousel>
+        <slidedeck-source    icon="./slides-icon" format="image" />
+        <manual-image-source icon="./slides-icon" source="slidesets" />
+    </carousel>
+    <carousel>
+        <manual-image-source icon="./video-icon" source="talk-videos" />
+        <manual-image-source icon="./photo-icon" source="talk-photos" />
+    </carousel>
+</section>
+
+<footer>
+All about Tim Perry - tech lead &amp; open-source champion at Softwire
+</footer>
+</body>
+</html>
