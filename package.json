@@ -1,0 +1,14 @@
+{
+  "name": "personal-page-feed",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "Tim Perry",
+  "license": "MIT",
+  "dependencies": {
+    "server-components": "^0.1.0"
+  }
+}
