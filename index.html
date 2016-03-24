@@ -4,7 +4,7 @@
 
 <section>
     <h1>What have I been up to?</h1>
-    <item-feed id="major-content">
+    <item-feed id="major-content" count=10>
         <manual-source icon="icons/blog-icon.png" source="blog-posts" />
         <manual-source icon="icons/talk-icon.png" source="talks-given" />
         <manual-source icon="icons/project-icon.png" source="project-events" />
@@ -12,8 +12,8 @@
 </section>
 
 <section>
-    <item-feed id="minor-events">
-        <twitter-source />
+    <item-feed id="minor-events" count=10>
+        <twitter-source username="pimterry" />
         <github-source include="PullRequest" />
     </item-feed>
 </section>

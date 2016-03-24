@@ -3,21 +3,31 @@
 var readFile = require("fs-readfile-promise");
 var components = require("server-components");
 var mustache = require("mustache");
+var _ = require("lodash");
 
 var domino = require("domino");
 
-var ItemFeed = components.newElement();
-ItemFeed.createdCallback = function () {
-    var items = [];
+readFile(__dirname + "/item-feed.html", 'utf8').then((rawHtml) => {
+    var ItemFeed = components.newElement();
 
-    this.addEventListener("items-ready", (itemsReadyEvent) => {
-        items = items.concat(itemsReadyEvent.items);
-    });
+    ItemFeed.createdCallback = function () {
+        var items = [];
+        var count = this.getAttribute("count");
 
-    return readFile(__dirname + "/item-feed.html", 'utf8').then((rawHtml) => {
-        // TODO How to more clearly wait until all events have fired?
-        this.innerHTML = mustache.render(rawHtml, { items: items });
-    });
-};
+        var feedContentNode = this.ownerDocument.createElement("div");
+        feedContentNode.classList.add("feed-content");
+        this.insertBefore(feedContentNode, this.firstChild);
 
-components.registerElement("item-feed", { prototype: ItemFeed });
+        this.addEventListener("items-ready", (itemsReadyEvent) => {
+            items = items.concat(itemsReadyEvent.items);
+            feedContentNode.innerHTML = mustache.render(rawHtml, {
+                items: _(items).sortBy((item) => item.timestamp)
+                               .reverse()
+                               .take(count)
+                               .value()
+            });
+        });
+    };
+
+    components.registerElement("item-feed", { prototype: ItemFeed });
+});

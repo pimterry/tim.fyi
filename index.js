@@ -1,11 +1,14 @@
 "use strict";
 
+require("dotenv").config();
+
 var express = require("express");
 var readFile = require("fs-readfile-promise");
 var components = require("server-components");
 
 require("./components/item-feed/item-feed");
 require("./components/manual-source");
+require("./components/twitter-source");
 
 var app = express();
 
