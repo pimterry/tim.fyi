@@ -4,29 +4,29 @@
 
 <section>
     <h1>What have I been up to?</h1>
-    <feed id="major-content">
-        <manual-source icon="./blog-icon" source="blog-posts" />
-        <manual-source icon="./talk-icon" source="talks-given" />
-        <manual-source icon="./project-icon" source="project-events" />
-    </feed>
+    <item-feed id="major-content">
+        <manual-source icon="icons/blog-icon.png" source="blog-posts" />
+        <manual-source icon="icons/talk-icon.png" source="talks-given" />
+        <manual-source icon="icons/project-icon.png" source="project-events" />
+    </item-feed>
 </section>
 
 <section>
-    <feed id="minor-events">
+    <item-feed id="minor-events">
         <twitter-source />
         <github-source include="PullRequest" />
-    </feed>
+    </item-feed>
 </section>
 
 <section>
-    <carousel>
-        <slidedeck-source    icon="./slides-icon" format="image" />
-        <manual-image-source icon="./slides-icon" source="slidesets" />
-    </carousel>
-    <carousel>
-        <manual-image-source icon="./video-icon" source="talk-videos" />
-        <manual-image-source icon="./photo-icon" source="talk-photos" />
-    </carousel>
+    <item-carousel>
+        <slidedeck-source icon="icons/slides-icon.png" format="image" />
+        <manual-source    icon="icons/slides-icon.png" source="slidesets" />
+    </item-carousel>
+    <item-carousel>
+        <manual-source icon="icons/video-icon.png" source="talk-videos" />
+        <manual-source icon="icons/photo-icon.png" source="talk-photos" />
+    </item-carousel>
 </section>
 
 <footer>

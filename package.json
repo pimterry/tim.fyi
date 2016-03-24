@@ -9,6 +9,9 @@
   "author": "Tim Perry",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.13.4",
+    "fs-readfile-promise": "^2.0.1",
+    "mustache": "^2.2.1",
     "server-components": "^0.1.0"
   }
 }
