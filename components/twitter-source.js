@@ -36,12 +36,20 @@ Twitter.createdCallback = function () {
     }
 
     return getTweetData.then((tweets) => {
-        this.dispatchEvent(new domino.impl.CustomEvent('items-ready', {
-            items: tweets.map((tweet) => { return {
+        var items = tweets.map((tweet) => {
+            var tweetText = tweet.entities.urls.reduce((tweetText, url) => {
+                return tweetText.replace(url.url, url.expanded_url);
+            }, tweet.text);
+
+            return {
                 icon: "/icons/twitter",
-                details: tweet.text,
+                details: tweetText,
                 timestamp: moment(tweet.created_at, 'dd MMM DD HH:mm:ss ZZ YYYY', 'en').unix()
-            }}),
+            }
+        });
+
+        this.dispatchEvent(new domino.impl.CustomEvent('items-ready', {
+            items: items,
             bubbles: true
         }));
     });
