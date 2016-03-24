@@ -9,6 +9,7 @@ var components = require("server-components");
 require("./components/item-feed/item-feed");
 require("./components/manual-source");
 require("./components/twitter-source");
+require("./components/github-source");
 
 var app = express();
 
