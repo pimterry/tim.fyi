@@ -1,6 +1,7 @@
 "use strict";
 
 require("dotenv").config();
+require('newrelic');
 
 var express = require("express");
 var readFile = require("fs-readfile-promise");

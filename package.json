@@ -19,6 +19,7 @@
     "memory-cache": "^0.1.4",
     "moment": "^2.12.0",
     "mustache": "^2.2.1",
+    "newrelic": "^1.26.0",
     "octokat": "^0.4.17",
     "server-components": "^0.1.0",
     "twit": "^2.2.3"
@@ -26,7 +27,7 @@
   "devDependencies": {
     "nodemon": "^1.9.1"
   },
-  "engines" : {
-    "node" : "~5.1.0"
+  "engines": {
+    "node": "~5.1.0"
   }
 }
