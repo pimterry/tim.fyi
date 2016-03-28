@@ -1,6 +1,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
 </head>
 <body>
 <header>
@@ -17,20 +18,23 @@
 <section id="portfolio-content">
     <item-carousel>
         <oembed-item-wrapper url="https://speakerdeck.com/oembed.json">
-            <manual-source icon="icons/slides-icon.png" source="speakerdeck-slides" />
+            <manual-source icon="slideshare" source="speakerdeck-slides" />
         </oembed-item-wrapper>
-        <manual-source    icon="icons/slides-icon.png" source="slidesets" />
-        <manual-source    icon="icons/video-icon.png"  source="talk-videos" />
-        <manual-source    icon="icons/photo-icon.png"  source="talk-photos" />
-        <manual-source    icon="icons/slides-icon.png" source="projects" />
+
+        <manual-source icon="slideshare"   source="slidesets" />
+        <manual-source icon="video-camera" source="talk-videos" />
+        <manual-source icon="photo"        source="talk-photos" />
+        <manual-source icon="laptop"       source="projects" />
     </item-carousel>
 </section>
 
 <section id="major-content">
     <item-feed count=10>
-        <manual-source icon="icons/blog-icon.png" source="blog-posts" />
-        <manual-source icon="icons/talk-icon.png" source="talks-given" />
-        <manual-source icon="icons/project-icon.png" source="project-events" />
+        <rss-source icon="newspaper-o" url="https://medium.com/feed/@pimterry/" />
+
+        <manual-source icon="newspaper-o" source="blog-posts" />
+        <manual-source icon="bullhorn"    source="talks-given" />
+        <manual-source icon="laptop"      source="project-events" />
     </item-feed>
 </section>
 

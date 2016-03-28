@@ -52,7 +52,7 @@ Github.createdCallback = function () {
             return !typeFilter || event.type === typeFilter
         }).map((event) => {
             return {
-                icon: "/icons/github",
+                icon: "github",
                 details: formatDescription(event),
                 timestamp: moment(event.createdAt, "dd MMM DD YYYY HH:mm:ss ZZ").unix()
             }
