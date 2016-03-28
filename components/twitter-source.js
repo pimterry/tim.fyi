@@ -38,7 +38,8 @@ Twitter.createdCallback = function () {
     return getTweetData.then((tweets) => {
         var items = tweets.map((tweet) => {
             var tweetText = tweet.entities.urls.reduce((tweetText, url) => {
-                return tweetText.replace(url.url, url.expanded_url);
+                return tweetText.replace(url.url,
+                    `<a href="${url.expanded_url}">${url.expanded_url}</a>`);
             }, tweet.text);
 
             return {
