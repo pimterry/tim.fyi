@@ -1,0 +1,60 @@
+@font-face {
+    font-family: Geomancy;
+    src: url("Geomancy%20-%20Extra%20Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Moderne;
+    src: url("MODERNE%20SANS.ttf");
+}
+
+@font-face {
+    font-family: 'Alegreya Sans SC';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Alegreya Sans SC Black'), local('AlegreyaSansSC-Black'), url("AlegrayaSansSC.woff2") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #ddd;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+header .name-and-icons {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+header h1 {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 100pt;
+    margin: 0 0 10px 0;
+}
+
+social-media-icons {
+    font-size: 25pt;
+}
+
+social-media-icons a {
+    margin: 5px;
+    color: #222;
+}
+
+#major-content, #minor-events {
+    display: inline-block;
+    width: 30%;
+    margin: 0 auto;
+    vertical-align: top;
+    text-align: left;
+}

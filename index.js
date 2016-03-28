@@ -14,6 +14,8 @@ require("./components/social-media-icons");
 
 var app = express();
 
+app.use(express.static('static'));
+
 app.get('/', function (req, res) {
     readFile("index.html").then((html) => {
         return components.render(html);
