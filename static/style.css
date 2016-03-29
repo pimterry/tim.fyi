@@ -54,8 +54,71 @@ header social-media-icons {
 }
 
 header social-media-icons a {
-    margin: 5px;
-    color: #222;
+    margin: 5px 8px;
+    color: #333;
+}
+
+header social-media-icons a:hover {
+    color: #000;
+}
+
+item-carousel {
+    margin-top: 40px;
+
+    display: block;
+    width: 110%;
+    position: relative;
+    left: -5.5%;
+
+    white-space: nowrap;
+    border-radius: 8px;
+    border: solid 5px #fff;
+    background-color: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+
+    overflow-x: scroll;
+}
+
+.carousel-item {
+    height: 250px;
+    display: inline-block;
+}
+
+.carousel-item .icon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    font-size: 30pt;
+    padding: 10px;
+    color: #fff;
+}
+
+oembed-item {
+    position: relative;
+    display: block;
+    white-space: normal;
+    text-align: left;
+}
+
+oembed-item .caption {
+    color: #fff;
+    font-family: arial, sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.bare-oembed {
+    background-color: #4b4b4b;
+    border-radius: 5px;
+}
+
+.carousel-item oembed-item img {
+    height: 250px;
+    cursor: pointer;
 }
 
 #major-content, #minor-events {
@@ -80,13 +143,4 @@ header social-media-icons a {
 .feed-item .details {
     line-height: 1.3;
     margin-left: 35px;
-}
-
-item-carousel {
-    white-space: nowrap;
-}
-
-.carousel-item {
-    height: 100px;
-    display: inline-block;
 }

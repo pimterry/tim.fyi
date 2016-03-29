@@ -1,0 +1,19 @@
+{{#oembed.thumbnail_url}}
+<a href="{{ url }}">
+    <oembed-item>
+        <img src="{{ oembed.thumbnail_url }}" />
+
+        <div class="caption">{{ details }}</div>
+
+        <script type='text/oembed-html'>
+            {{ &oembed.html }}
+        </script>
+    </oembed-item>
+</a>
+{{/oembed.thumbnail_url}}
+
+{{^oembed.thumbnail_url}}
+  <div class="bare-oembed">
+    {{ &oembed.html }}
+  </div>
+{{/oembed.thumbnail_url}}
