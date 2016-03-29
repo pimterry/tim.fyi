@@ -30,4 +30,4 @@ readFile(__dirname + "/item-feed.html", 'utf8').then((rawHtml) => {
     };
 
     components.registerElement("item-feed", { prototype: ItemFeed });
-});
+}).catch((e) => console.log(e));

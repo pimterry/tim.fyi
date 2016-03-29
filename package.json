@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test",
-    "dev": "nodemon ./index.js",
+    "test": "jshint . || exit 1",
+    "dev": "nodemon -x 'npm test && npm start'",
     "start": "node ./index.js"
   },
   "author": "Tim Perry",
@@ -25,6 +25,7 @@
     "twit": "^2.2.3"
   },
   "devDependencies": {
+    "jshint": "^2.9.1",
     "nodemon": "^1.9.1"
   },
   "engines": {

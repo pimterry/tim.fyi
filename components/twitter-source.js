@@ -46,7 +46,7 @@ Twitter.createdCallback = function () {
                 icon: "twitter",
                 details: tweetText,
                 timestamp: moment(tweet.created_at, 'dd MMM DD HH:mm:ss ZZ YYYY', 'en').unix()
-            }
+            };
         });
 
         this.dispatchEvent(new domino.impl.CustomEvent('items-ready', {

@@ -22,7 +22,7 @@ app.get('/', function (req, res) {
     readFile("index.html").then((html) => {
         return components.render(html);
     }).then((output) => {
-        res.send(output)
+        res.send(output);
     }).catch((error) => {
         res.send("Panic, failed to render. " + error);
     });

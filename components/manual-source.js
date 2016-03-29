@@ -20,7 +20,7 @@ ManualSource.createdCallback = function () {
             }}),
             bubbles: true
         }));
-    }).catch((e) => console.log(e));
+    });
 };
 
 components.registerElement("manual-source", { prototype: ManualSource });

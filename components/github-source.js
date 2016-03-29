@@ -17,7 +17,7 @@ Github.createdCallback = function () {
     function getAllEvents(username) {
         return Promise.all(_.range(1, 100).map((pageNum) => {
             // Note the catch() - we just skip any pages we can't successfully load
-            return github.users(username).events.public.fetch({page: pageNum}).catch(() => [])
+            return github.users(username).events.public.fetch({page: pageNum}).catch(() => []);
         })).then((eventPages) => {
             return _.flatten(eventPages);
         });
@@ -49,13 +49,13 @@ Github.createdCallback = function () {
 
     return getEventData.then((events) => {
         var items = events.filter((event) => {
-            return !typeFilter || event.type === typeFilter
+            return !typeFilter || event.type === typeFilter;
         }).map((event) => {
             return {
                 icon: "github",
                 details: formatDescription(event),
                 timestamp: moment(event.createdAt, "dd MMM DD YYYY HH:mm:ss ZZ").unix()
-            }
+            };
         });
 
         this.dispatchEvent(new domino.impl.CustomEvent('items-ready', {
