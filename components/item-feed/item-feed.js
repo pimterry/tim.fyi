@@ -12,7 +12,7 @@ readFile(__dirname + "/item-feed.html", 'utf8').then((rawHtml) => {
 
     ItemFeed.createdCallback = function () {
         var items = [];
-        var count = this.getAttribute("count");
+        var count = this.getAttribute("count") || Infinity;
 
         var feedContentNode = this.ownerDocument.createElement("div");
         feedContentNode.classList.add("feed-content");
@@ -27,6 +27,9 @@ readFile(__dirname + "/item-feed.html", 'utf8').then((rawHtml) => {
                                .value()
             });
         });
+
+        // TODO: Should this have a promise and wait for the expected
+        // responses, instead of sources promise to return some data?
     };
 
     components.registerElement("item-feed", { prototype: ItemFeed });
