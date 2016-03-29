@@ -16,6 +16,7 @@ ManualSource.createdCallback = function () {
             items: json.map((item) => { return {
                 icon: icon,
                 details: item.name,
+                url: item.url,
                 timestamp: moment(item.date, "YYYY/MM/DD").unix()
             }}),
             bubbles: true

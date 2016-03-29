@@ -20,14 +20,20 @@
 
 <section id="portfolio-content">
     <item-carousel>
-        <oembed-item-wrapper url="https://speakerdeck.com/oembed.json">
+        <oembed-item-wrapper url="https://speakerdeck.com/oembed.json" height="250">
             <manual-source icon="slideshare" source="speakerdeck-slides" />
         </oembed-item-wrapper>
 
-        <manual-source icon="slideshare"   source="slidesets" />
-        <manual-source icon="video-camera" source="talk-videos" />
-        <manual-source icon="photo"        source="talk-photos" />
-        <manual-source icon="laptop"       source="projects" />
+        <oembed-item-wrapper url="http://youtube.com/oembed" height="250">
+            <manual-source icon="video-camera" source="youtube-videos" />
+        </oembed-item-wrapper>
+
+        <oembed-item-wrapper url="http://vimeo.com/api/oembed.json" height="250">
+            <manual-source icon="video-camera" source="vimeo-videos" />
+        </oembed-item-wrapper>
+
+        <manual-source icon="slideshare" source="slidesets" />
+        <manual-source icon="photo"      source="talk-photos" />
     </item-carousel>
 </section>
 

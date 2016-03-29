@@ -82,6 +82,11 @@ header social-media-icons a {
     margin-left: 35px;
 }
 
-.carousel-item {
+item-carousel {
+    white-space: nowrap;
+}
 
+.carousel-item {
+    height: 100px;
+    display: inline-block;
 }
