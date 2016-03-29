@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jshint . || exit 1",
-    "dev": "nodemon -x 'npm test && npm start'",
+    "dev": "nodemon -e js,html -x 'npm test && npm start'",
     "start": "node ./index.js"
   },
   "author": "Tim Perry",
