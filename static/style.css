@@ -1,14 +1,4 @@
 @font-face {
-    font-family: Geomancy;
-    src: url("Geomancy%20-%20Extra%20Bold.otf") format("opentype");
-}
-
-@font-face {
-    font-family: Moderne;
-    src: url("MODERNE%20SANS.ttf");
-}
-
-@font-face {
     font-family: 'Alegreya Sans SC';
     font-style: normal;
     font-weight: 900;
@@ -18,7 +8,7 @@
 
 html {
     text-align: center;
-    background-image: url("hilltop.jpg");
+    background-image: url("valley.jpg");
     background-size: cover;
 }
 
@@ -30,27 +20,41 @@ body {
 
 header {
     width: 100%;
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.8);
     text-align: center;
-    padding: 40px 0;
-    margin: 0 0 40px 0;
+    padding: 20px 0 0;
+    margin: 0 0 10px 0;
+
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+    border-radius: 5px 5px 0 0;
 }
 
-header img {
+header .headshot-and-icons {
+    float: left;
+    padding: 40px 0 40px 55px;
+}
+
+header .headshot {
     display: inline-block;
     vertical-align: top;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
 
 header h1 {
     display: inline-block;
     font-family: 'Alegreya Sans SC', sans-serif;
-    font-size: 100pt;
-    margin: 0 0 10px 0;
+    font-size: 115pt;
+    line-height: 1.1;
+    margin: 0;
+    color: #285fa3;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
 }
 
 header social-media-icons {
     font-size: 25pt;
     display: block;
+    margin-top: 42px;
 }
 
 header social-media-icons a {
@@ -59,7 +63,29 @@ header social-media-icons a {
 }
 
 header social-media-icons a:hover {
-    color: #000;
+    color: #285fa3;
+}
+
+header .description {
+    text-align: left;
+    width: 640px;
+    display: inline-block;
+    margin: 0 auto;
+
+    font-size: 22pt;
+    line-height: 1.4;
+    font-family: Copse, "Times New Roman", serif;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+header .description a {
+    color: #285fa3;
+    font-weight: bold;
+}
+
+.nowrap {
+    white-space: nowrap;
 }
 
 item-carousel {
@@ -123,21 +149,25 @@ oembed-item .caption {
 
 #major-content, #minor-events {
     display: inline-block;
-    width: 40%;
+    width: 48%;
     margin: 0 auto;
     vertical-align: top;
     text-align: left;
+    font-size: 13pt;
 }
 
 .feed-item {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 20px 10px;
     margin: 10px 1%;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 .feed-item .icon {
     float: left;
     margin: 2px 10px;
+    color: #285fa3;
 }
 
 .feed-item .details {

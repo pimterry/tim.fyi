@@ -4,21 +4,33 @@
     <link rel="icon" href="http://tim.fyi/favicon.ico">
 
     <link rel="stylesheet" href="style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Copse' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
 </head>
 <body>
 <header>
-    <img src="headshot.png" />
-    <h1>Tim Perry</h1>
-    <social-media-icons
-            twitter="pimterry"
-            github="pimterry"
-            linkedin="pimterry"
-            medium="pimterry"
-    ></social-media-icons>
-</header>
+    <div class="headshot-and-icons">
+        <img src="headshot.png" class="headshot" />
+        <social-media-icons
+                twitter="pimterry"
+                github="pimterry"
+                linkedin="pimterry"
+                medium="pimterry"
+        ></social-media-icons>
+    </div>
 
-<section id="portfolio-content">
+    <h1>Tim Perry</h1>
+
+
+    <p class="description">
+        Tech lead and open-source champion at <a href="http://www.softwire.com">Softwire</a>.
+        Creator of <a href="http://www.buildfocus.io">Build Focus</a>.
+        Keen <span class="nowrap">open-source</span> contributor, and maintainer of
+        <a href="https://pimterry.github.io/loglevel">Loglevel</a> and
+        <a href="https://github.com/pimterryserver-components">Server Components</a>.
+    </p>
+
     <item-carousel>
         <oembed-item-wrapper url="https://speakerdeck.com/oembed.json" height="250">
             <manual-source icon="slideshare" source="speakerdeck-slides" />
@@ -35,7 +47,7 @@
         <manual-source icon="slideshare" source="slidesets" />
         <manual-source icon="photo"      source="talk-photos" />
     </item-carousel>
-</section>
+</header>
 
 <section id="major-content">
     <item-feed count=10>
