@@ -1,5 +1,6 @@
 "use strict";
 
+require("heapdump");
 require("dotenv").config();
 require('newrelic');
 

@@ -15,6 +15,7 @@
     "express": "^4.13.4",
     "feedparser-promised": "^1.0.1",
     "fs-readfile-promise": "^2.0.1",
+    "heapdump": "^0.3.7",
     "lodash": "^4.6.1",
     "memory-cache": "^0.1.4",
     "moment": "^2.12.0",
