@@ -14,28 +14,26 @@ Github.createdCallback = function () {
         token: process.env.GITHUB_TOKEN
     });
 
-    function getAllEvents(username) {
-        return Promise.all(_.range(1, 100).map((pageNum) => {
-            // Note the catch() - we just skip any pages we can't successfully load
-            return github.users(username).events.public.fetch({page: pageNum}).catch(() => []);
-        })).then((eventPages) => {
-            return _.flatten(eventPages);
-        });
-    }
-
     var typeFilter = this.getAttribute("type-filter");
     var username = this.getAttribute("username");
-    var cacheId = "github-events-" + username;
+    var cacheId = "github-events-" + username + "/" + typeFilter;
 
-    var cachedEvents = cache.get(cacheId);
+    function getEvents() {
+        var cachedEvents = cache.get(cacheId);
 
-    var getEventData;
-    if (cachedEvents) getEventData = Promise.resolve(cachedEvents);
-    else {
-        getEventData = getAllEvents(username).then((events) => {
-            cache.put(cacheId, events, 1000 * 60 * 1);
-            return events;
-        });
+        if (cachedEvents) return Promise.resolve(cachedEvents);
+        else {
+            return Promise.all(_.range(1, 10).map((pageNum) => {
+                // Note the catch() - we just skip any pages we can't successfully load
+                return github.users(username).events.public.fetch({page: pageNum}).catch(() => []);
+            })).then((eventPages) => {
+                var allEvents = _.flatten(eventPages);
+                var relevantEvents = allEvents.filter((event) => !typeFilter || event.type === typeFilter);
+
+                cache.put(cacheId, relevantEvents, 1000 * 60 * 1);
+                return relevantEvents;
+            });
+        }
     }
 
     function formatDescription(event) {
@@ -47,10 +45,8 @@ Github.createdCallback = function () {
         }
     }
 
-    return getEventData.then((events) => {
-        var items = events.filter((event) => {
-            return !typeFilter || event.type === typeFilter;
-        }).map((event) => {
+    return getEvents().then((events) => {
+        var items = events.map((event) => {
             return {
                 icon: "github",
                 details: formatDescription(event),
