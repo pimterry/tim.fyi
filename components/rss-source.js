@@ -27,7 +27,7 @@ RssSource.createdCallback = function () {
     return getRss(url).then((items) => {
         this.dispatchEvent(new domino.impl.CustomEvent('items-ready', {
             items: items.map((item) => { return {
-                details: item.title,
+                title: item.title,
                 icon: icon,
                 timestamp: moment(item.pubDate).unix()
             }}),

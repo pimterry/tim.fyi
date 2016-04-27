@@ -15,7 +15,7 @@ ManualSource.createdCallback = function () {
         this.dispatchEvent(new domino.impl.CustomEvent('items-ready', {
             items: json.map((item) => { return {
                 icon: icon,
-                details: item.name,
+                title: item.title,
                 url: item.url,
                 timestamp: moment(item.date, "YYYY/MM/DD").unix()
             }}),

@@ -1,26 +1,26 @@
 [
   {
-    "name": "Microservice Pipeline Architecture",
+    "title": "Microservice Pipeline Architecture",
     "url": "https://speakerdeck.com/pimterry/microservice-pipeline-architecture/",
     "date": "2016/02/25"
   },
   {
-    "name": "TypeScript Will Finally Bring Peace To Your Troubled Soul",
+    "title": "TypeScript Will Finally Bring Peace To Your Troubled Soul",
     "url": "https://speakerdeck.com/pimterry/typescript-will-finally-bring-peace-to-your-troubled-soul",
     "date": "2015/08/26"
   },
   {
-    "name": "What Not To Do With Databases",
+    "title": "What Not To Do With Databases",
     "url": "https://speakerdeck.com/pimterry/what-not-to-do-with-databases",
     "date": "2014/11/11"
   },
   {
-    "name": "Building Resilient Infrastructure with CouchDB",
+    "title": "Building Resilient Infrastructure with CouchDB",
     "url": "https://speakerdeck.com/pimterry/building-resilient-infrastructure-with-couchdb",
     "date": "2014/04/30"
   },
   {
-    "name": "The Many Ways to Build Modular JavaScript",
+    "title": "The Many Ways to Build Modular JavaScript",
     "url": "https://speakerdeck.com/pimterry/the-many-ways-to-build-modular-javascript",
     "date": "2013/12/12"
   }

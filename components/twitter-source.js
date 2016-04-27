@@ -44,7 +44,7 @@ Twitter.createdCallback = function () {
 
             return {
                 icon: "twitter",
-                details: tweetText,
+                title: tweetText,
                 timestamp: moment(tweet.created_at, 'dd MMM DD HH:mm:ss ZZ YYYY', 'en').unix()
             };
         });

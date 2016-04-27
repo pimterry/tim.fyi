@@ -49,7 +49,7 @@ Github.createdCallback = function () {
         var items = events.map((event) => {
             return {
                 icon: "github",
-                details: formatDescription(event),
+                title: formatDescription(event),
                 timestamp: moment(event.createdAt, "dd MMM DD YYYY HH:mm:ss ZZ").unix()
             };
         });

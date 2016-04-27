@@ -1,5 +1,17 @@
 "use strict";
 
+/**
+ Defines a <item-feed> component, which listens for bubbling 'items-ready' events,
+ with an 'items' property containing item data, and renders all items received.
+ Each item must contain 'timestamp' (numeric) and 'title' (HTML) properties, and
+ can optionally contain 'url' (URL), 'subtitle' (HTML), 'description' (HTML)
+ and 'location' (HTML) properties.
+
+ TODO: Look out for security issues in raw HTML here! Can that be dropped?
+ Server-side XSS-style attacks would be a bad thing indeed. What if a data source
+ injects component HTML (and thus executes code?).
+ */
+
 var readFile = require("fs-readfile-promise");
 var components = require("server-components");
 var mustache = require("mustache");

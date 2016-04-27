@@ -1,71 +1,71 @@
 [
   {
-    "name": "Opening Open-Source with DevOps at DevOpsPro",
+    "title": "Opening Open-Source with DevOps at DevOpsPro",
     "url": "http://devopspro.lt/tim-perry/",
     "date": "2016/05/26"
   },
   {
-    "name": "Microservice Pipeline Architecture at ITAKE Unconf",
+    "title": "Microservice Pipeline Architecture at ITAKE Unconf",
     "url": "http://itakeunconf.com/sessions/microservice-pipeline-architecture/",
     "date": "2016/05/19"
   },
   {
-    "name": "Microservice Pipeline Architecture at Voxxed Days Bristol",
+    "title": "Microservice Pipeline Architecture at Voxxed Days Bristol",
     "url": "https://voxxeddays.com/bristol16/2016/01/10/microservice-pipeline-architecture/",
     "date": "2016/02/25"
   },
   {
-    "name": "Your Web Stack Would Betray You In An Instant at Topconf Linz",
+    "title": "Your Web Stack Would Betray You In An Instant at Topconf Linz",
     "url": "http://topconf.com/linz-2016/trackevent/your-web-stack-would-betray-you-in-an-instant/",
     "date": "2016/02/03"
   },
   {
-    "name": "Microservice Pipeline Architecture at Topconf Linz",
+    "title": "Microservice Pipeline Architecture at Topconf Linz",
     "url": "http://topconf.com/linz-2016/trackevent/microservice-pipeline-architecture/",
     "date": "2016/02/03"
   },
   {
-    "name": "Your Build Smells at DevTernity",
+    "title": "Your Build Smells at DevTernity",
     "url": "http://devternity.com/#19",
     "date": "2015/12/01"
   },
   {
-    "name": "Your Build Smells at Topconf Talinn",
+    "title": "Your Build Smells at Topconf Talinn",
     "url": "http://topconf.com/tallinn-2015/trackevent/your-build-smells/",
     "date": "2015/11/18"
   },
   {
-    "name": "TypeScript Will Bring Peace To Your Troubled Soul at BarcelonaJS",
+    "title": "TypeScript Will Bring Peace To Your Troubled Soul at BarcelonaJS",
     "url": "http://barcelonajs.org/",
     "date": "2015/11/11"
   },
   {
-    "name": "Your Build Smells at Bristech",
+    "title": "Your Build Smells at Bristech",
     "url": "http://2015.briste.ch/programme/",
     "date": "2015/10/15"
   },
   {
-    "name": "Your Web Stack Would Betray You In An Instant at Hackference",
+    "title": "Your Web Stack Would Betray You In An Instant at Hackference",
     "url": "http://2015.hackference.co.uk/speakers/tim-perry.html",
     "date": "2015/10/02"
   },
   {
-    "name": "Your Web Stack Would Betray You In An Instant at ACCU Bristol",
+    "title": "Your Web Stack Would Betray You In An Instant at ACCU Bristol",
     "url": "http://www.meetup.com/ACCU-Bristol/events/224611168/",
     "date": "2015/09/17"
   },
   {
-    "name": "Your Web Stack Would Betray You In An Instant at DevDay",
+    "title": "Your Web Stack Would Betray You In An Instant at DevDay",
     "url": "http://devday.pl/sessions.html",
     "date": "2015/09/17"
   },
   {
-    "name": "TypeScript Will Bring Peace To Your Troubled Soul at LNUG",
+    "title": "TypeScript Will Bring Peace To Your Troubled Soul at LNUG",
     "url": "http://lanyrd.com/2015/lnug-august/",
     "date": "2015/08/26"
   },
   {
-    "name": "Your Web Stack Would Betray You In An Instant at DEVit",
+    "title": "Your Web Stack Would Betray You In An Instant at DEVit",
     "url": "http://lanyrd.com/2015/devitconf/sdrdkk/",
     "date": "2015/05/15"
   }
