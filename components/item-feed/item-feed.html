@@ -1,6 +1,33 @@
 {{#items}}
 <div class="feed-item">
     <i class="fa fa-{{icon}} icon"></i>
-    <div class="title">{{&title}}</div>
+    
+    {{#url}}
+      <a href="{{url}}">
+        <div class="title">{{& title}}</div>
+      </a>
+    {{/url}}
+    {{^url}}
+      <div class="title">{{& title}}</div>
+    {{/url}}
+
+    <div class="relative-time">{{relativeTime}}</div>
+
+    {{#location}}
+      <div class="location">
+        <i class="fa fa-map-marker"></i>
+        {{& location}}
+      </div>
+    {{/location}}
+    {{#subtitle}}
+      <div class="subtitle">
+        {{& subtitle}}
+      </div>
+    {{/subtitle}}
+    {{#description}}
+      <div class="description">
+        {{& description}}
+      </div>
+    {{/description}}
 </div>
 {{/items}}
