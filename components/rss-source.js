@@ -13,7 +13,7 @@ function getRss(url) {
     if (cachedResult) return Promise.resolve(cachedResult);
     else {
         return feedparser.parse(url).then((result) => {
-            cache.put(url, result, 1000 * 60* 10);
+            cache.put(url, result, 1000 * 60 * 10);
             return result;
         });
     }
