@@ -36,22 +36,26 @@ Github.createdCallback = function () {
         }
     }
 
-    function formatDescription(event) {
+    function eventDetails(event) {
         switch (event.type) {
             case "PullRequestEvent":
-                return `Pull request to ${event.repo.name}: ${event.payload.pullRequest.title}`;
+                return {
+                  title: event.payload.pullRequest.title,
+                  subtitle: `Pull request to ${event.repo.name}`
+                };
             default:
-                return "Did something on Github";
+                return {
+                  title: "Did something on Github"
+                };
         }
     }
 
     return getEvents().then((events) => {
         var items = events.map((event) => {
-            return {
+            return _.merge({
                 icon: "github",
-                title: formatDescription(event),
                 timestamp: moment(event.createdAt, "dd MMM DD YYYY HH:mm:ss ZZ").unix()
-            };
+            }, eventDetails(event));
         });
 
         this.dispatchEvent(new domino.impl.CustomEvent('items-ready', {
