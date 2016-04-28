@@ -41,7 +41,8 @@ Github.createdCallback = function () {
             case "PullRequestEvent":
                 return {
                   title: event.payload.pullRequest.title,
-                  subtitle: `Pull request to ${event.repo.name}`
+                  subtitle: `Pull request to ${event.repo.name}`,
+                  url: event.payload.pullRequest.htmlUrl
                 };
             default:
                 return {
