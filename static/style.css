@@ -184,4 +184,9 @@ oembed-item .caption {
 .feed-item .title {
     line-height: 1.3;
     margin-left: 35px;
+    word-wrap: break-word;
+}
+
+.feed-item .description * {
+  width: 100%;
 }

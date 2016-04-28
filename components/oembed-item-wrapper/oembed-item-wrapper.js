@@ -3,10 +3,10 @@
 var fs = require("fs");
 var components = require("server-components");
 var domino = require("domino");
-var request = require("request-promise");
-var cache = require("memory-cache");
 var mustache = require("mustache");
 var _ = require("lodash");
+
+var getOembed = require("../../get-oembed");
 
 // TODO: Build this into server-components for convenience?
 function addScript(url, document) {
@@ -20,22 +20,6 @@ function addScript(url, document) {
         var newScriptElement = document.createElement("script");
         newScriptElement.setAttribute("src", url);
         headElement.appendChild(newScriptElement);
-    }
-}
-
-function getOembed(oembedUrl, itemUrl, height) {
-    var url = `${oembedUrl}?url=${itemUrl}&maxheight=${height}`;
-
-    var cachedResult = cache.get(url);
-    if (cachedResult) return Promise.resolve(cachedResult);
-    else {
-        return request({
-            url: url,
-            json: true
-        }).then((oembed) => {
-            cache.put(url, oembed, 1000 * 60 * 60 * 24);
-            return oembed;
-        });
     }
 }
 
