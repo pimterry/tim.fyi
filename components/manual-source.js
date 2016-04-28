@@ -8,6 +8,16 @@ var _ = require("lodash");
 
 var getOembed = require("../get-oembed");
 
+function includeOembed(item) {
+    if (item.oembed) {
+        return getOembed(item.oembed.root_url, item.oembed.item_url, 350).then((oembed) => {
+            return _.merge(item, { description: oembed.html });
+        });
+    } else {
+        return item;
+    }
+}
+
 var ManualSource = components.newElement();
 ManualSource.createdCallback = function () {
     var icon = this.getAttribute("icon");
@@ -15,18 +25,7 @@ ManualSource.createdCallback = function () {
 
     return readFile(`data/${sourceName}.json`, 'utf8').then((rawJson) => {
         var json = JSON.parse(rawJson);
-
-        return Promise.all(json.map((item) => {
-          if (item.oembed) {
-            return getOembed(item.oembed.root_url, item.oembed.item_url, 250).then((oembed) => {
-              var newItem = _.merge(item, { description: oembed.html });
-              console.log(item, newItem);
-              return newItem;
-            });
-          } else {
-            return item;
-          }
-        }))
+        return Promise.all(json.map(includeOembed));
       }).then((loadedItems) => {
         this.dispatchEvent(new domino.impl.CustomEvent('items-ready', {
             items: loadedItems.map((item) => { return {
