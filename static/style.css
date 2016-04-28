@@ -16,6 +16,7 @@ html {
     background-repeat: no-repeat;
     padding-bottom: 50px;
     min-height: 400vh;
+    min-width: 1140px;
 }
 
 body {
