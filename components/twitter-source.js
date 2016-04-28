@@ -45,7 +45,10 @@ Twitter.createdCallback = function () {
             return {
                 icon: "twitter",
                 title: tweetText,
-                timestamp: moment(tweet.created_at, 'dd MMM DD HH:mm:ss ZZ YYYY', 'en').unix()
+                timestamp: moment(tweet.created_at, 'dd MMM DD HH:mm:ss ZZ YYYY', 'en').unix(),
+                subtitle: `<i class="fa fa-twitter"></i>
+                           <a href="https://twitter.com/statuses/${tweet.id_str}">View on Twitter</a>`,
+                location: tweet.place? tweet.place.full_name : undefined
             };
         });
 

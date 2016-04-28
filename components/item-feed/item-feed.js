@@ -41,7 +41,9 @@ readFile(__dirname + "/item-feed.html", 'utf8').then((rawHtml) => {
                         .map((item) => {
                           var timestamp = item.timestamp;
                           var time = moment(timestamp, "X");
-                          item.relativeTime = time.fromNow();
+                          var relativeTime = time.fromNow();
+                          relativeTime = relativeTime.charAt(0).toUpperCase() + relativeTime.slice(1)
+                          item.relativeTime = relativeTime;
                           return item;
                         })
                         .value()

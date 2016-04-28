@@ -34,7 +34,8 @@ ManualSource.createdCallback = function () {
                 title: item.title,
                 url: item.url,
                 timestamp: moment(item.date, "YYYY/MM/DD").unix(),
-                description: item.description
+                description: item.description,
+                location: item.location,
             }}),
             bubbles: true
         }));

@@ -43,7 +43,7 @@ OembedItemWrapper.createdCallback = function () {
                     timestamp: item.timestamp,
                     html: mustache.render(oembedItemHtml, {
                         oembed: oembedData,
-                        details: item.details,
+                        title: item.title,
                         url: item.url
                     })
                 }

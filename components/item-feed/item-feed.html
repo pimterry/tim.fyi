@@ -2,7 +2,7 @@
 <div class="feed-item">
     <i class="fa fa-{{icon}} icon"></i>
 
-    <div class="metadata">
+    <div class="outline">
       {{#url}}
         <a href="{{url}}"><div class="title">{{& title}}</div></a>
       {{/url}}
@@ -10,21 +10,24 @@
         <div class="title">{{& title}}</div>
       {{/url}}
 
-      <div class="relative-time">{{relativeTime}}</div>
+      <div class="metadata">
+          <div class="relative-time"><i class="fa fa-clock-o"></i> {{relativeTime}}</div>
 
-      {{#location}}
-        <div class="location">
-          <i class="fa fa-map-marker"></i>
-          {{& location}}
-        </div>
-      {{/location}}
-      {{#subtitle}}
-        <div class="subtitle">
-          {{& subtitle}}
-        </div>
-      {{/subtitle}}
+          {{#location}}
+            <div class="location">
+              <i class="fa fa-map-marker"></i>
+              {{& location}}
+            </div>
+          {{/location}}
+
+          {{#subtitle}}
+            <div class="subtitle">
+              {{& subtitle}}
+            </div>
+          {{/subtitle}}
+      </div>
     </div>
-    
+
     {{#description}}
       <div class="description">
         {{& description}}
