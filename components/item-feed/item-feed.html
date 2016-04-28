@@ -1,29 +1,30 @@
 {{#items}}
 <div class="feed-item">
     <i class="fa fa-{{icon}} icon"></i>
-    
-    {{#url}}
-      <a href="{{url}}">
+
+    <div class="metadata">
+      {{#url}}
+        <a href="{{url}}"><div class="title">{{& title}}</div></a>
+      {{/url}}
+      {{^url}}
         <div class="title">{{& title}}</div>
-      </a>
-    {{/url}}
-    {{^url}}
-      <div class="title">{{& title}}</div>
-    {{/url}}
+      {{/url}}
 
-    <div class="relative-time">{{relativeTime}}</div>
+      <div class="relative-time">{{relativeTime}}</div>
 
-    {{#location}}
-      <div class="location">
-        <i class="fa fa-map-marker"></i>
-        {{& location}}
-      </div>
-    {{/location}}
-    {{#subtitle}}
-      <div class="subtitle">
-        {{& subtitle}}
-      </div>
-    {{/subtitle}}
+      {{#location}}
+        <div class="location">
+          <i class="fa fa-map-marker"></i>
+          {{& location}}
+        </div>
+      {{/location}}
+      {{#subtitle}}
+        <div class="subtitle">
+          {{& subtitle}}
+        </div>
+      {{/subtitle}}
+    </div>
+    
     {{#description}}
       <div class="description">
         {{& description}}
