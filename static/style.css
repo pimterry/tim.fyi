@@ -149,11 +149,22 @@ oembed-item .caption {
 
 #major-content, #minor-events {
     display: inline-block;
-    width: 48%;
     margin: 0 auto;
     vertical-align: top;
     text-align: left;
     font-size: 13pt;
+}
+
+#major-content {
+  width: 60%;
+}
+
+#minor-events {
+  width: 36%;
+}
+
+#minor-events .description {
+  display: none;
 }
 
 .feed-item {

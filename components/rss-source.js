@@ -29,7 +29,8 @@ RssSource.createdCallback = function () {
             items: items.map((item) => { return {
                 title: item.title,
                 icon: icon,
-                timestamp: moment(item.pubDate).unix()
+                timestamp: moment(item.pubDate).unix(),
+                description: item.description
             }}),
             bubbles: true
         }));
