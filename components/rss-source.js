@@ -30,7 +30,8 @@ RssSource.createdCallback = function () {
                 title: item.title,
                 icon: icon,
                 timestamp: moment(item.pubDate).unix(),
-                description: item.description
+                description: item.description,
+                url: item.link
             }}),
             bubbles: true
         }));

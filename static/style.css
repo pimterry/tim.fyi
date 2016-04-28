@@ -11,10 +11,11 @@ html {
     background-color: #4889D8;
     background-image: url("glacier.jpg");
     background-image: url("glacier.jpg"), linear-gradient(180deg, #285FA3, #4889D8 600px);
-    background-size: contain;
+    background-size: 100%;
     background-position: bottom center;
     background-repeat: no-repeat;
     padding-bottom: 50px;
+    min-height: 400vh;
 }
 
 body {
@@ -51,9 +52,10 @@ header h1 {
     font-family: 'Alegreya Sans SC', sans-serif;
     font-size: 115pt;
     line-height: 1.1;
-    margin: 0;
+    letter-spacing: -4px;
+    margin: 0 0 0 -20px;
     color: #285fa3;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
 }
 
 header social-media-icons {
@@ -139,6 +141,8 @@ oembed-item .caption {
     top: 0;
     left: 0;
     padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
     background-color: rgba(0,0,0,0.5);
 }
 
@@ -161,11 +165,11 @@ oembed-item .caption {
 }
 
 #major-content {
-    width: 60%;
+    width: 62%;
 }
 
 #minor-events {
-    width: 36%;
+    width: 34%;
     font-size: 80%;
 }
 
@@ -184,7 +188,7 @@ oembed-item .caption {
 
 .feed-item .icon {
     float: left;
-    margin: 6px 10px 0 6px;
+    margin: 8px 10px 0 6px;
     font-size: 16px;
 }
 
@@ -192,13 +196,22 @@ oembed-item .caption {
     margin-top: 3px;
 }
 
+#minor-events .feed-item {
+    background-color: rgba(0,0,0,0.6);
+    border: solid 1px rgba(255,255,255,0.1);
+}
+
+#minor-events .feed-item * {
+    color: #dfdfdf;
+}
+
 .feed-item .outline {
     margin-left: 35px;
 }
 
 .feed-item .metadata {
-    color: #777;
-    font-weight: lighter;
+    color: #666;
+    font-weight: light;
     margin: 14px 0 0px;
 }
 
