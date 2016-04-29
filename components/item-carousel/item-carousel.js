@@ -7,10 +7,14 @@ var _ = require("lodash");
 
 var domino = require("domino");
 
+var addScript = require("../../add-script");
+
 readFile(__dirname + "/item-carousel.html", 'utf8').then((rawHtml) => {
     var ItemCarousel = components.newElement();
 
     ItemCarousel.createdCallback = function () {
+        addScript("/item-carousel.runtime.js", this.ownerDocument);
+
         var items = [];
         var count = this.getAttribute("count") || Infinity;
 

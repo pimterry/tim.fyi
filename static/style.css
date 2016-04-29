@@ -83,7 +83,6 @@ header .description {
 }
 
 header .description a {
-    color: #285fa3;
     font-weight: bold;
 }
 
@@ -104,8 +103,36 @@ item-carousel {
     border: solid 5px #fff;
     background-color: #fff;
     box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
 
+item-carousel carousel-arrow {
+    visibility: hidden; /* Shown by JS if/once JS has initialized */
+
+    font-size: 50pt;
+    color: #fff;
+    padding: 0 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    cursor: pointer;
+}
+
+item-carousel carousel-arrow:hover {
+    opacity: 0.8;
+}
+
+item-carousel carousel-arrow[direction=left] {
+    left: -70px;
+}
+
+item-carousel carousel-arrow[direction=right] {
+    right: -70px;
+}
+
+.carousel-content {
     overflow-x: scroll;
+    scroll-behavior: smooth;
 }
 
 .carousel-item {
@@ -242,7 +269,7 @@ oembed-item .caption {
 }
 
 footer {
-    margin: 23px auto 0;
+    margin: 11px auto 0;
     width: 100%;
 
     font-family: Lato, sans-serif;
@@ -256,18 +283,22 @@ footer {
 footer social-media-icons > a {
     display: inline-block;
     font-size: 25pt;
-    margin: 23px 46px;
+    padding: 23px 46px;
     color: #000;
 }
 
 footer copyright-notice {
     display: block;
-    padding-bottom: 23px;
+    padding-bottom: 12px;
     font-size: 80%;
 }
 
 a {
     color: #285FA3;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 p {

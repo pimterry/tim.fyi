@@ -4,24 +4,9 @@ var fs = require("fs");
 var components = require("server-components");
 var domino = require("domino");
 var mustache = require("mustache");
-var _ = require("lodash");
 
 var getOembed = require("../../get-oembed");
-
-// TODO: Build this into server-components for convenience?
-function addScript(url, document) {
-    var headElement = document.querySelector("head");
-
-    var isScriptElementForUrl = (node) => {
-        return node.tagName === "SCRIPT" && node.getAttribute("src") === url;
-    };
-
-    if (!_.find(headElement.childNodes, isScriptElementForUrl)) {
-        var newScriptElement = document.createElement("script");
-        newScriptElement.setAttribute("src", url);
-        headElement.appendChild(newScriptElement);
-    }
-}
+var addScript = require("../../add-script");
 
 var oembedItemHtml = fs.readFileSync(__dirname + "/oembed-item.html", 'utf8');
 
