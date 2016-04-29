@@ -14,7 +14,6 @@ html {
     background-size: 100%;
     background-position: bottom center;
     background-repeat: no-repeat;
-    padding-bottom: 50px;
     min-height: 400vh;
     min-width: 1140px;
 }
@@ -30,7 +29,7 @@ header {
     background-color: rgba(255,255,255,0.9);
     text-align: center;
     padding: 16px 0 0;
-    margin: 0 0 23px 0;
+    margin: 0 0 46px 0;
 
     box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
     border-radius: 5px 5px 0 0;
@@ -166,12 +165,12 @@ oembed-item .caption {
 }
 
 #major-content {
-    width: 62%;
-    margin-right: 23px;
+    width: 62.5%;
+    margin-right: 46px;
 }
 
 #minor-events {
-    width: 34%;
+    width: 33%;
     font-size: 79%;
 }
 
@@ -181,7 +180,7 @@ oembed-item .caption {
 
 .feed-item {
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px 10px;
+    padding: 20px 20px;
     margin: 0 0 23px;
     border-radius: 2px;
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
@@ -212,8 +211,7 @@ oembed-item .caption {
 }
 
 .feed-item .metadata {
-    color: #666;
-    font-weight: light;
+    opacity: 0.65;
     margin: 14px 0 0px;
 }
 
@@ -235,7 +233,7 @@ oembed-item .caption {
 }
 
 #major-content .title {
-    font-family: Copse, Lato, Arial, Sans-serif;
+    font-family: Copse, Serif;
     font-weight: bold;
 }
 
