@@ -15,6 +15,7 @@ require("./components/github-source");
 require("./components/rss-source");
 require("./components/oembed-item-wrapper/oembed-item-wrapper");
 require("./components/social-media-icons");
+require("./components/copyright-notice");
 
 var app = express();
 
