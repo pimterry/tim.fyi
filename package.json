@@ -6,9 +6,8 @@
   "scripts": {
     "test": "jshint . || exit 1",
     "dev": "nodemon -e js,html --exec npm run devstart",
-    "devstart": "npm test && npm start",
-
-    "start": "node ./index.js"
+    "devstart": "npm test && node index.js",
+    "start": "forever index.js"
   },
   "author": "Tim Perry",
   "license": "MIT",
@@ -16,6 +15,7 @@
     "dotenv": "^2.0.0",
     "express": "^4.13.4",
     "feedparser-promised": "^1.0.1",
+    "forever": "^0.15.1",
     "fs-readfile-promise": "^2.0.1",
     "heapdump": "^0.3.7",
     "lodash": "^4.6.1",
