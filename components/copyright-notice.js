@@ -2,8 +2,6 @@
 
 var components = require("server-components");
 
-var domino = require("domino");
-
 var CopyrightNotice = components.newElement();
 
 CopyrightNotice.createdCallback = function () {

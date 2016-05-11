@@ -2,17 +2,16 @@
 
 var fs = require("fs");
 var components = require("server-components");
-var domino = require("domino");
+var componentsStatic = require("server-components-static");
 var mustache = require("mustache");
 
 var getOembed = require("../../get-oembed");
-var addScript = require("../../add-script");
 
 var oembedItemHtml = fs.readFileSync(__dirname + "/oembed-item.html", 'utf8');
 
 var OembedItemWrapper = components.newElement();
 OembedItemWrapper.createdCallback = function () {
-    addScript("/oembed-item.js", this.ownerDocument);
+    componentsStatic.includeScript(this.ownerDocument, "/oembed-item.js");
 
     var oembedUrl = this.getAttribute("url");
     var height = this.getAttribute("height") || 200;
@@ -34,7 +33,7 @@ OembedItemWrapper.createdCallback = function () {
                 }
             });
         })).then((items) => {
-            this.parentElement.dispatchEvent(new domino.impl.CustomEvent('items-ready', {
+            this.parentElement.dispatchEvent(new components.dom.CustomEvent('items-ready', {
                 items: items,
                 bubbles: true
             }));

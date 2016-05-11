@@ -18,8 +18,6 @@ var mustache = require("mustache");
 var moment = require("moment");
 var _ = require("lodash");
 
-var domino = require("domino");
-
 readFile(__dirname + "/item-feed.html", 'utf8').then((rawHtml) => {
     var ItemFeed = components.newElement();
 

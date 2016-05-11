@@ -25,7 +25,8 @@
     "newrelic": "^1.26.0",
     "octokat": "^0.4.17",
     "request-promise": "^2.0.1",
-    "server-components": "^0.1.0",
+    "server-components": "^0.1.4",
+    "server-components-static": "^0.1.0",
     "twit": "^2.2.3"
   },
   "devDependencies": {

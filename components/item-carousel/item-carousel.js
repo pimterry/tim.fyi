@@ -2,18 +2,15 @@
 
 var readFile = require("fs-readfile-promise");
 var components = require("server-components");
+var componentsStatic = require("server-components-static");
 var mustache = require("mustache");
 var _ = require("lodash");
-
-var domino = require("domino");
-
-var addScript = require("../../add-script");
 
 readFile(__dirname + "/item-carousel.html", 'utf8').then((rawHtml) => {
     var ItemCarousel = components.newElement();
 
     ItemCarousel.createdCallback = function () {
-        addScript("/item-carousel.runtime.js", this.ownerDocument);
+        componentsStatic.includeScript(this.ownerDocument, "/item-carousel.runtime.js");
 
         var items = [];
         var count = this.getAttribute("count") || Infinity;

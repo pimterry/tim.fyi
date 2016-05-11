@@ -1,7 +1,6 @@
 "use strict";
 
 var components = require("server-components");
-var domino = require("domino");
 var Octokat = require("octokat");
 var cache = require("memory-cache");
 
@@ -59,7 +58,7 @@ Github.createdCallback = function () {
             }, eventDetails(event));
         });
 
-        this.dispatchEvent(new domino.impl.CustomEvent('items-ready', {
+        this.dispatchEvent(new components.dom.CustomEvent('items-ready', {
             items: items,
             bubbles: true
         }));

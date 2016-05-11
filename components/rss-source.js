@@ -1,7 +1,6 @@
 "use strict";
 
 var components = require("server-components");
-var domino = require("domino");
 var moment = require("moment");
 
 var feedparser = require('feedparser-promised');
@@ -25,7 +24,7 @@ RssSource.createdCallback = function () {
     var icon = this.getAttribute("icon");
 
     return getRss(url).then((items) => {
-        this.dispatchEvent(new domino.impl.CustomEvent('items-ready', {
+        this.dispatchEvent(new components.dom.CustomEvent('items-ready', {
             items: items.map((item) => { return {
                 title: item.title,
                 icon: icon,

@@ -1,7 +1,6 @@
 "use strict";
 
 var components = require("server-components");
-var domino = require("domino");
 var Twit = require("twit");
 var cache = require("memory-cache");
 var moment = require("moment");
@@ -52,7 +51,7 @@ Twitter.createdCallback = function () {
             };
         });
 
-        this.dispatchEvent(new domino.impl.CustomEvent('items-ready', {
+        this.dispatchEvent(new components.dom.CustomEvent('items-ready', {
             items: items,
             bubbles: true
         }));

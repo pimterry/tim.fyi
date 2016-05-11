@@ -2,7 +2,6 @@
 
 var readFile = require("fs-readfile-promise");
 var components = require("server-components");
-var domino = require("domino");
 var moment = require("moment");
 var _ = require("lodash");
 
@@ -27,7 +26,7 @@ ManualSource.createdCallback = function () {
         var json = JSON.parse(rawJson);
         return Promise.all(json.map(includeOembed));
       }).then((loadedItems) => {
-        this.dispatchEvent(new domino.impl.CustomEvent('items-ready', {
+        this.dispatchEvent(new components.dom.CustomEvent('items-ready', {
             items: loadedItems.map((item) => { return {
                 icon: icon,
                 title: item.title,
