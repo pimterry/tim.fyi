@@ -16,6 +16,7 @@ require("./components/rss-source");
 require("./components/oembed-item-wrapper/oembed-item-wrapper");
 require("./components/social-media-icons");
 require("./components/copyright-notice");
+require("./components/google-analytics");
 
 var app = express();
 
@@ -23,7 +24,7 @@ app.use(express.static('static'));
 
 app.get('/', function (req, res) {
     readFile("index.html").then((html) => {
-        return components.render(html);
+        return components.renderPage(html);
     }).then((output) => {
         res.send(output);
     }).catch((error) => {
