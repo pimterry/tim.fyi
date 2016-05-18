@@ -2,14 +2,14 @@
   {
     "title": "Opening Open-Source with DevOps at DevOpsPro",
     "url": "http://devopspro.lt/tim-perry/",
-    "date": "2016/05/26",
+    "datetime": "2016-05-26T12:00:00Z",
     "location": "Vilnius, Lithuania",
     "description": "<p>DevOps has made great strides across the software world, but not yet in open-source. Open-source has never been the most accessible part of software development to jump into, but we can help fix that.</p><p>In this talk we’ll look at real-world examples of how DevOps tools and techniques have been used to simplify setup, development and deployment in a selection of open-source projects, and learn how you too can help make open-source more open, for everybody.</p>"
   },
   {
     "title": "Microservice Pipeline Architecture at ITAKE Unconf",
     "url": "http://itakeunconf.com/sessions/microservice-pipeline-architecture/",
-    "date": "2016/05/19",
+    "datetime": "2016-05-19T08:00:00Z",
     "location": "Bucharest, Romania",
     "description": "<p>It's tough to understand and get started with microservices until you've seen them in practice, looked at the challenges and benefits up close, and seen how they fit into different use cases.</p><p>In this talk we'll look at microservice pipeline architecture, taking a deep look inside the content pipeline powering the new BBC Newsbeat website and mobile applications. We'll examine the architecture, tools and processes that make this effective, the benefits, and our solutions to all the new challenges microservices can bring in practice.</p>"
   },

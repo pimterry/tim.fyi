@@ -25,16 +25,20 @@ ManualSource.createdCallback = function () {
     return readFile(`data/${sourceName}.json`, 'utf8').then((rawJson) => {
         var json = JSON.parse(rawJson);
         return Promise.all(json.map(includeOembed));
-      }).then((loadedItems) => {
+    }).then((loadedItems) => {
         this.dispatchEvent(new components.dom.CustomEvent('items-ready', {
-            items: loadedItems.map((item) => { return {
-                icon: icon,
-                title: item.title,
-                url: item.url,
-                timestamp: moment(item.date, "YYYY/MM/DD").unix(),
-                description: item.description,
-                location: item.location,
-            }}),
+            items: loadedItems.map((item) => {
+                var datetime = item.datetime ? moment(item.datetime) : moment(item.date, "YYYY/MM/DD");
+
+                return {
+                    icon: icon,
+                    title: item.title,
+                    url: item.url,
+                    timestamp: datetime.unix(),
+                    description: item.description,
+                    location: item.location,
+                }
+            }),
             bubbles: true
         }));
     });
