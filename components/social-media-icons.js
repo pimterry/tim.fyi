@@ -4,6 +4,14 @@ var components = require("server-components");
 var componentsStatic = require("server-components-static");
 var _ = require("lodash");
 
+/**
+ * A simple component to render social media icons and links to accounts for whatever platforms you're using.
+ * The icons are all taken from Font Awesome, and only icons for the provided usernames are shown. The supported
+ * platforms so far are Facebook, Twitter, Medium, LinkedIn, Github and Reddit.
+ * 
+ * @example
+ * <social-media-icons twitter="pimterry" github="pimterry"></social-media-icons>
+ */
 var SocialMediaIcons = components.newElement();
 
 var icons = [
