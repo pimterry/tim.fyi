@@ -44,3 +44,7 @@ item-carousel carousel-arrow[direction=right] {
 .feed-item iframe {
   height: 200px;
 }
+
+footer social-media-icons a {
+  padding: 23px 12px;
+}
