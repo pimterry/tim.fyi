@@ -20,13 +20,15 @@ if (document.registerElement) {
             var currentScrollDistance = carouselContentWrapper.scrollLeft;
             var carouselElements = carouselContentWrapper.querySelectorAll(".carousel-item");
 
+            var i, element;
+            var margin = 5;
+
             // Work out what the next element to show in either direction is
             // and set the current scroll distance to show that.
-            var i, element;
             if (this.getAttribute("direction") === "right") {
                 for (i = 0; i < carouselElements.length; i++) {
                     element = carouselElements[i];
-                    if (element.offsetLeft > currentScrollDistance) {
+                    if (element.offsetLeft > currentScrollDistance + margin) {
                         carouselContentWrapper.scrollLeft = element.offsetLeft;
                         break;
                     }
@@ -35,7 +37,7 @@ if (document.registerElement) {
             else if (this.getAttribute("direction") === "left") {
                 for (i = carouselElements.length - 1; i >= 0; i--) {
                     element = carouselElements[i];
-                    if (element.offsetLeft < currentScrollDistance) {
+                    if (element.offsetLeft < currentScrollDistance - margin) {
                         carouselContentWrapper.scrollLeft = element.offsetLeft;
                         break;
                     }
