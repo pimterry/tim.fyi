@@ -1,0 +1,40 @@
+/* Very simple mobile approach for now, just tweaking desktop styles.
+   In future this needs a more substantial responsive approach, but not for now */
+
+html {
+    min-width: 1040px;
+}
+
+/* Break carousel out into a separate lozenge */
+
+header {
+    padding-bottom: 46px;
+    margin-bottom: 331px;
+    position: relative
+}
+
+item-carousel {
+    position: absolute;
+    top: 100%;
+
+    width: 100%;
+    box-sizing: border-box;
+    left: 0;
+    border-radius: 5px;
+    margin-top: 26px;
+}
+
+/* Move carousel arrows inside lozenge */
+
+carousel-arrow {
+    background-color: rgba(0,0,0,0.8);
+    padding: 0 15px;
+}
+
+item-carousel carousel-arrow[direction=left] {
+    left: 0;
+}
+
+item-carousel carousel-arrow[direction=right] {
+    right: 0;
+}

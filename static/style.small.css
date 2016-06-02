@@ -1,0 +1,63 @@
+/* Very simple mobile approach for now, just tweaking desktop styles.
+   In future this needs a more substantial responsive approach, but not for now */
+
+html {
+    min-width: initial;
+
+    /* Don't include our big background image */
+    background-image: linear-gradient(180deg, #285FA3, #4889D8 600px);
+}
+
+body {
+    width: auto;
+    margin: 23px 23px 0;
+}
+
+/* Make header flexible width */
+
+header {
+    box-sizing: border-box;
+    padding: 33px 46px;
+    text-align: center;
+}
+
+header .headshot-and-icons {
+    padding: 0 10px 20px 0;
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+header social-media-icons {
+    margin-top: -15px;
+    text-shadow: 0 0 20px rgb(234, 240, 247);
+}
+
+header .headshot {
+    width: 150px;
+}
+
+header h1 {
+    display: inline-block;
+    vertical-align: middle;
+
+    line-height: 0.8;
+    padding: 5px 0 10px;
+    margin: 0;
+    font-size: 95pt;
+}
+
+header .description {
+    width: auto;
+}
+
+/* Show only major content, no minor details - TODO: find a new way to include both and interleave */
+
+#major-content {
+    width: 100%;
+    margin: 0;
+}
+
+#minor-events {
+    display: none;
+}

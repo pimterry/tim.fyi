@@ -15,11 +15,10 @@ html {
     background-position: bottom center;
     background-repeat: no-repeat;
     min-height: 400vh;
-    min-width: 1140px;
+    min-width: 1077px;
 }
 
 body {
-    padding: 0;
     margin: 46px auto 0;
     width: 1024px;
 }
@@ -32,7 +31,7 @@ header {
     margin: 0 0 46px 0;
 
     box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px;
 }
 
 header .headshot-and-icons {
@@ -110,10 +109,11 @@ item-carousel carousel-arrow {
 
     font-size: 50pt;
     color: #fff;
-    padding: 0 20px;
+    padding: 0 19px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 1;
 
     cursor: pointer;
 }
@@ -123,11 +123,11 @@ item-carousel carousel-arrow:hover {
 }
 
 item-carousel carousel-arrow[direction=left] {
-    left: -70px;
+    left: -68px;
 }
 
 item-carousel carousel-arrow[direction=right] {
-    right: -70px;
+    right: -68px;
 }
 
 .carousel-content {

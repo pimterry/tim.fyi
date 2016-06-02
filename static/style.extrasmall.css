@@ -1,0 +1,46 @@
+/* Very simple mobile approach for now, just tweaking desktop styles.
+   In future this needs a more substantial responsive approach, but not for now */
+
+body {
+  width: auto;
+  margin: 12px 12px 0;
+}
+
+header {
+  padding: 23px;
+  margin-bottom: 281px;
+}
+
+header h1 {
+  font-size: 20vw;
+}
+
+header .description {
+  font-size: 6vw;
+}
+
+item-carousel {
+  left: -12px;
+  right: -12px;
+  width: auto;
+
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+}
+
+.carousel-item, .carousel-item .bare-oembed > *, .carousel-item oembed-item img, .carousel-item oembed-item iframe {
+  height: 200px;
+}
+
+item-carousel carousel-arrow[direction=left] {
+  padding: 0 10px 0 5px;
+}
+
+item-carousel carousel-arrow[direction=right] {
+  padding: 0 5px 0 10px;
+}
+
+.feed-item iframe {
+  height: 200px;
+}
