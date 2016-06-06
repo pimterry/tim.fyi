@@ -25,8 +25,8 @@
     "date": "2016/02/25",
     "location": "Bristol, UK",
     "oembed": {
-      "root_url": "https://speakerdeck.com/oembed.json",
-      "item_url": "https://speakerdeck.com/pimterry/microservice-pipeline-architecture/"
+      "root_url": "http://youtube.com/oembed",
+      "item_url": "https://www.youtube.com/watch?v=FxPfLKa8R1w"
     }
   },
   {
@@ -40,7 +40,11 @@
     "title": "Microservice Pipeline Architecture at Topconf Linz",
     "location": "Linz, Austria",
     "url": "http://topconf.com/linz-2016/trackevent/microservice-pipeline-architecture/",
-    "date": "2016/02/03"
+    "date": "2016/02/03",
+    "oembed": {
+      "root_url": "https://speakerdeck.com/oembed.json",
+      "item_url": "https://speakerdeck.com/pimterry/microservice-pipeline-architecture/"
+    }
   },
   {
     "title": "Your Build Smells at DevTernity",
