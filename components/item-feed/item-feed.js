@@ -24,27 +24,39 @@ readFile(__dirname + "/item-feed.html", 'utf8').then((rawHtml) => {
     ItemFeed.createdCallback = function () {
         var items = [];
         var count = this.getAttribute("count") || Infinity;
+        var futureCount = this.getAttribute("future-count") || Infinity;
 
         var feedContentNode = this.ownerDocument.createElement("div");
         feedContentNode.classList.add("feed-content");
         this.insertBefore(feedContentNode, this.firstChild);
 
         this.addEventListener("items-ready", (itemsReadyEvent) => {
-            items = items.concat(itemsReadyEvent.items);
+            items = _(items).concat(itemsReadyEvent.items).sortBy((item) => item.timestamp).reverse();
+
+            var now = moment().unix();
+            var futureOrPastItems = items.partition((item) => item.timestamp > now).value();
+            var itemsToShow = _(futureOrPastItems[0]).takeRight(futureCount)
+                                                     .concat(futureOrPastItems[1])
+                                                     .take(count);
+
             feedContentNode.innerHTML = mustache.render(rawHtml, {
-                items: _(items)
-                        .sortBy((item) => item.timestamp)
-                        .reverse()
-                        .take(count)
-                        .map((item) => {
-                          var timestamp = item.timestamp;
-                          var time = moment(timestamp, "X");
-                          var relativeTime = time.fromNow();
-                          relativeTime = relativeTime.charAt(0).toUpperCase() + relativeTime.slice(1)
-                          item.relativeTime = relativeTime;
-                          return item;
-                        })
-                        .value()
+                items: itemsToShow.map((item) => {
+                    var timestamp = item.timestamp;
+                    var time = moment(timestamp, "X");
+                    var relativeTime = time.fromNow();
+                    relativeTime = relativeTime.charAt(0).toUpperCase() + relativeTime.slice(1);
+
+                    return {
+                        relativeTime,
+                        url: item.url,
+                        icon: item.icon,
+                        description: item.description,
+                        title: item.title,
+                        subtitle: item.subtitle,
+                        location: item.location,
+                        future: timestamp > now
+                    };
+                }).value()
             });
         });
 

@@ -38,3 +38,8 @@ item-carousel carousel-arrow[direction=left] {
 item-carousel carousel-arrow[direction=right] {
     right: 0;
 }
+
+/* Add some extra margin to 'Recently' header to match extra spacing from the above */
+.feed-item.future-item + .feed-item:not(.future-item) {
+    margin-top: 52px;
+}

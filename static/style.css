@@ -210,6 +210,53 @@ oembed-item .caption {
     font-family: Lato, Arial, Sans-serif;
 }
 
+.feed-item.future-item {
+    background-color: transparent;
+    padding: 12px 20px;
+    box-shadow: none;
+    margin: 0;
+    border-top: 2px solid rgba(255,255,255,0.1);
+}
+
+.feed-item.future-item * {
+    color: #fafafa;
+}
+
+.feed-item.future-item:first-of-type:before {
+    content: "Coming soon";
+}
+
+.feed-item.future-item + .feed-item:not(.future-item):before {
+    content: "Recently";
+}
+
+#minor-events .feed-item:first-of-type:before {
+    content: "Chatter";
+}
+
+.feed-item.future-item:first-of-type,
+#minor-events .feed-item:first-of-type {
+    margin-top: 44px;
+    position: relative;
+}
+
+.feed-item.future-item + .feed-item:not(.future-item) {
+    margin-top: 70px;
+    position: relative;
+}
+
+#minor-events .feed-item:first-of-type:before,
+.feed-item.future-item:first-of-type:before,
+.feed-item.future-item + .feed-item:not(.future-item):before {
+    position: absolute;
+    left: 0;
+    top: -50px;
+    font-size: 30pt;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: #fff;
+    opacity: 0.5;
+}
+
 .feed-item .icon {
     float: left;
     margin: 8px 10px 0 1px;
@@ -233,9 +280,21 @@ oembed-item .caption {
     margin-left: 35px;
 }
 
+#major-content .feed-item .outline {
+    width: 100%;
+}
+
 .feed-item .metadata {
     opacity: 0.65;
     margin: 14px 0 0px;
+}
+
+#major-content .feed-item .metadata {
+    width: 35%;
+    display: inline-block;
+    margin: 2px -20px 0 0;
+    line-height: 1.8em;
+    text-align: right;
 }
 
 .feed-item .metadata i.fa {
@@ -249,10 +308,20 @@ oembed-item .caption {
     margin-right: 15px;
 }
 
+#major-content .feed-item .metadata > * {
+    display: block;
+}
+
 .feed-item .title {
     line-height: 1.3;
     word-wrap: break-word;
     font-size: 1.38em;
+}
+
+#major-content .feed-item .title {
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
 }
 
 #major-content .title {

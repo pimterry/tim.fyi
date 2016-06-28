@@ -29,6 +29,8 @@ item-carousel {
   border-right: none;
 }
 
+/* Lots of small sizing tweaks */
+
 .carousel-item, .carousel-item .bare-oembed > *, .carousel-item oembed-item img, .carousel-item oembed-item iframe {
   height: 200px;
 }
@@ -47,4 +49,23 @@ item-carousel carousel-arrow[direction=right] {
 
 footer social-media-icons a {
   padding: 23px 12px;
+}
+
+/* Drop feed metadata onto a separate line */
+
+#major-content .feed-item .outline {
+  width: auto;
+}
+
+#major-content .feed-item .title {
+    width: 100%;
+}
+
+#major-content .feed-item .metadata {
+  width: auto;
+  text-align: left;
+}
+
+#major-content .feed-item .metadata > * {
+  display: inline-block;
 }
