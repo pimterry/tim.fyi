@@ -1,5 +1,35 @@
 [
   {
+    "title": "Your Web Stack Would Betray You In An Instant at ConFoo",
+    "url": "https://confoo.ca/en/yvr2016/session/server-side-web-components",
+    "date": "2016/12/6",
+    "location": "Vancouver, Canada"
+  },
+  {
+    "title": "Server-Side Web Components at ConFoo",
+    "url": "https://confoo.ca/en/yvr2016/session/server-side-web-components",
+    "date": "2016/12/6",
+    "location": "Vancouver, Canada"
+  },
+  {
+    "title": "Microservice Pipeline Architecture at Agile Turkey",
+    "url": "http://www.summit.agileturkey.org/",
+    "date": "2016/10/06",
+    "location": "Istanbul, Turkey"
+  },
+  {
+    "title": "Opening Open Source with DevOps at DevDay",
+    "url": "http://devday.pl/",
+    "date": "2016/09/16",
+    "location": "Krakow, Poland"
+  },
+  {
+    "title": "Server-Side Web Components on the Web Platform Podcast",
+    "url": "https://plus.google.com/u/0/events/c4qhgbsav21gemq63341bq5acqk",
+    "datetime": "2016-07-19T13:00:00-04:00",
+    "location": "Online"
+  },
+  {
     "title": "Opening Open Source with DevOps at DevOps BCN",
     "url": "http://www.meetup.com/DevOps-BCN-Group/events/231533450/",
     "datetime": "2016-06-15T17:00:00Z",
