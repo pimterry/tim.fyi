@@ -41,7 +41,7 @@
     "datetime": "2016-07-19T13:00:00-04:00",
     "location": "Online",
     "oembed": {
-      "root_url": "http://youtube.com/oembed",
+      "root_url": "https://youtube.com/oembed",
       "item_url": "https://www.youtube.com/watch?v=zuCEmstv350"
     }
   },
@@ -71,7 +71,7 @@
     "date": "2016/02/25",
     "location": "Bristol, UK",
     "oembed": {
-      "root_url": "http://youtube.com/oembed",
+      "root_url": "https://youtube.com/oembed",
       "item_url": "https://www.youtube.com/watch?v=FxPfLKa8R1w"
     }
   },

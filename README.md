@@ -1,1 +1,1 @@
-# The homepage of [Tim Perry](http://tim.fyi)
+# The homepage of [Tim Perry](https://tim.fyi)
