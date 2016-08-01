@@ -63,7 +63,10 @@
     "url": "http://itakeunconf.com/sessions/microservice-pipeline-architecture/",
     "datetime": "2016-05-19T08:00:00Z",
     "location": "Bucharest, Romania",
-    "description": "<p>It's tough to understand and get started with microservices until you've seen them in practice, looked at the challenges and benefits up close, and seen how they fit into different use cases.</p><p>In this talk we'll look at microservice pipeline architecture, taking a deep look inside the content pipeline powering the new BBC Newsbeat website and mobile applications. We'll examine the architecture, tools and processes that make this effective, the benefits, and our solutions to all the new challenges microservices can bring in practice.</p>"
+    "oembed": {
+      "root_url": "https://youtube.com/oembed",
+      "item_url": "https://www.youtube.com/watch?v=IfRx5LZe1vg"
+    }
   },
   {
     "title": "Microservice Pipeline Architecture at Voxxed Days Bristol",
