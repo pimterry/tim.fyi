@@ -114,7 +114,7 @@
     "location": "Barcelona, Spain"
   },
   {
-    "title": "Your Build Smells at Bristech",
+    "title": "Your Build Smells at Bristech conference",
     "url": "http://2015.briste.ch/programme/",
     "date": "2015/10/15",
     "location": "Bristol, UK"
@@ -148,5 +148,65 @@
     "url": "http://lanyrd.com/2015/devitconf/sdrdkk/",
     "date": "2015/05/15",
     "location": "Thessaloniki, Greece"
+  },
+  {
+    "title": "Web Components And Microservices Are The Same Thing at LNUG",
+    "url": "http://lanyrd.com/2015/lnug-january/",
+    "date": "2015/01/28",
+    "location": "London, UK"
+  },
+  {
+    "title": "Web Components And Microservices Are The Same Thing at Bristech Meetup",
+    "url": "http://www.meetup.com/bristech/events/218591959/",
+    "date": "2014/12/04",
+    "location": "Bristol, UK"
+  },
+  {
+    "title": "Web Components And Microservices Are The Same Thing at Front-end London",
+    "url": "http://www.frontendlondon.co.uk/archive#fel18",
+    "date": "2014/11/27",
+    "location": "London, UK"
+  },
+  {
+    "title": "What Not To Do With Databases at { develop: BBC }",
+    "url": "http://www.bbc.co.uk/academy/technology/events/article/art20141001095726612",
+    "date": "2014/11/11",
+    "location": "Salford, UK"
+  },
+  {
+    "title": "Web Components And Microservices Are The Same Thing at WeNode",
+    "url": "http://wenode.barcelonajs.org/",
+    "date": "2014/10/04",
+    "location": "Barcelona, Spain"
+  },
+  {
+    "title": "Building Resilient Infrastructure with CouchDB at Bristol BCS",
+    "url": "http://www.bristol.bcs.org.uk/?q=node/194",
+    "date": "2014/09/17",
+    "location": "Bristol, UK"
+  },
+  {
+    "title": "Your Web Stack Would Betray You In An Instant at DevsLoveBacon",
+    "url": "http://devslovebacon.com/",
+    "date": "2014/05/17",
+    "location": "London, UK"
+  },
+  {
+    "title": "Building Resilient Infrastructure with CouchDB at NoSQL Matters Cologne",
+    "url": "http://2014.nosql-matters.org/cgn/",
+    "date": "2014/04/28",
+    "location": "Cologne, Germany"
+  },
+  {
+    "title": "The Many Ways To Build Modular JavaScript at { develop: BBC }",
+    "url": "http://lanyrd.com/2013/developbbc/",
+    "date": "2013/11/12",
+    "location": "Salford, UK"
+  },
+  {
+    "title": "The Many Ways To Build Modular JavaScript at Bristech Meetup",
+    "url": "http://www.meetup.com/bristech/messages/boards/thread/38035992",
+    "date": "2013/10/03",
+    "location": "Bristol, UK"
   }
 ]
