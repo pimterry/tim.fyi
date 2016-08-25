@@ -18,6 +18,12 @@
     "location": "Vancouver, Canada"
   },
   {
+    "title": "HTTPS Is Not Enough at Bristech conference",
+    "url": "2016.briste.ch",
+    "date": "2016/11/03",
+    "location": "Bristol, UK"
+  },
+  {
     "title": "Microservice Pipeline Architecture at Agile Turkey",
     "url": "http://www.summit.agileturkey.org/",
     "date": "2016/10/06",
@@ -38,7 +44,7 @@
   {
     "title": "Promises Are So Passé at Frontend Conference",
     "url": "https://frontendconf.ch/speakers/#tim-perry",
-    "date": "2016-09-02T10:30:00+02:00",
+    "datetime": "2016-09-02T10:30:00+02:00",
     "location": "Zurich, Switzerland"
   },
   {
