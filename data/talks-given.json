@@ -45,7 +45,11 @@
     "title": "Promises Are So Passé at Frontend Conference",
     "url": "https://frontendconf.ch/speakers/#tim-perry",
     "datetime": "2016-09-02T10:30:00+02:00",
-    "location": "Zurich, Switzerland"
+    "location": "Zurich, Switzerland",
+    "oembed": {
+      "root_url": "https://speakerdeck.com/oembed.json",
+      "item_url": "https://speakerdeck.com/pimterry/promises-are-so-passe/"
+    }
   },
   {
     "title": "Server-Side Web Components on the Web Platform Podcast",
