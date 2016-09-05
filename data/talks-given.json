@@ -47,8 +47,8 @@
     "datetime": "2016-09-02T10:30:00+02:00",
     "location": "Zurich, Switzerland",
     "oembed": {
-      "root_url": "https://speakerdeck.com/oembed.json",
-      "item_url": "https://speakerdeck.com/pimterry/promises-are-so-passe/"
+      "root_url": "https://vimeo.com/api/oembed.json",
+      "item_url": "https://vimeo.com/181328943"
     }
   },
   {
