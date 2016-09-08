@@ -39,7 +39,11 @@
     "title": "Microservice Pipeline Architecture at Full Stack Fest",
     "url": "https://2016.fullstackfest.com/speakers/tim-perry/",
     "datetime": "2016-09-06T11:25:00+02:00",
-    "location": "Barcelona, Spain"
+    "location": "Barcelona, Spain",
+    "oembed": {
+      "root_url": "https://speakerdeck.com/oembed.json",
+      "item_url": "https://speakerdeck.com/pimterry/microservice-pipeline-architecture/"
+    }
   },
   {
     "title": "Promises Are So Passé at Frontend Conference",
