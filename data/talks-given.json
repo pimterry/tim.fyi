@@ -51,8 +51,8 @@
     "datetime": "2016-09-06T11:25:00+02:00",
     "location": "Barcelona, Spain",
     "oembed": {
-      "root_url": "https://speakerdeck.com/oembed.json",
-      "item_url": "https://speakerdeck.com/pimterry/microservice-pipeline-architecture/"
+      "root_url": "https://youtube.com/oembed",
+      "item_url": "https://www.youtube.com/watch?v=vUCr1oTtaKA"
     }
   },
   {
