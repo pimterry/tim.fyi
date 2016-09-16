@@ -39,7 +39,11 @@
     "title": "Opening Open Source with DevOps at DevDay",
     "url": "http://devday.pl/",
     "datetime": "2016-09-16T10:10:00+02:00",
-    "location": "Krakow, Poland"
+    "location": "Krakow, Poland",
+    "oembed": {
+      "root_url": "https://speakerdeck.com/oembed.json",
+      "item_url": "https://speakerdeck.com/pimterry/opening-open-source-with-devops/"
+    }
   },
   {
     "title": "Microservice Pipeline Architecture at Full Stack Fest",
