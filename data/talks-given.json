@@ -26,14 +26,18 @@
   {
     "title": "HTTPS Is Not Enough at Bristech conference",
     "url": "http://2016.bris.tech/",
-    "date": "2016/11/03",
+    "datetime": "2016-11-03T09:30:00+00:00",
     "location": "Bristol, UK"
   },
   {
     "title": "Microservice Pipeline Architecture at Agile Turkey",
     "url": "http://www.summit.agileturkey.org/",
-    "date": "2016/10/06",
-    "location": "Istanbul, Turkey"
+    "datetime": "2016-10-06T11:40:00+03:00",
+    "location": "Istanbul, Turkey",
+    "oembed": {
+      "root_url": "https://speakerdeck.com/oembed.json",
+      "item_url": "https://speakerdeck.com/pimterry/microservice-pipeline-architecture/"
+    }
   },
   {
     "title": "Opening Open Source with DevOps at DevDay",
