@@ -22,9 +22,7 @@ require("./components/google-analytics");
 var app = express();
 
 app.use(express.static('static'));
-app.use(helmet.hsts({
-  maxAge: 31556926
-}));
+app.use(helmet());
 
 app.get('/', function (req, res) {
     readFile("index.html").then((html) => {
