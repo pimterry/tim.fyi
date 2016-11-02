@@ -4,6 +4,7 @@ require("dotenv").config();
 require('newrelic');
 
 var express = require("express");
+var helmet = require("helmet");
 var readFile = require("fs-readfile-promise");
 var components = require("server-components");
 
@@ -21,6 +22,9 @@ require("./components/google-analytics");
 var app = express();
 
 app.use(express.static('static'));
+app.use(helmet.hsts({
+  maxAge: 31556926
+}));
 
 app.get('/', function (req, res) {
     readFile("index.html").then((html) => {
