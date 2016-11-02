@@ -25,6 +25,8 @@ app.use(express.static('static'));
 app.use(helmet());
 
 app.get('/', function (req, res) {
+    res.set("Strict-Transport-Security", "max-age=31556926");
+
     readFile("index.html").then((html) => {
         return components.renderPage(html);
     }).then((output) => {
