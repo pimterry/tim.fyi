@@ -27,7 +27,11 @@
     "title": "HTTPS Is Not Enough at Bristech conference",
     "url": "http://2016.bris.tech/",
     "datetime": "2016-11-03T09:30:00+00:00",
-    "location": "Bristol, UK"
+    "location": "Bristol, UK",
+    "oembed": {
+        "root_url": "https://speakerdeck.com/oembed.json",
+        "item_url": "https://speakerdeck.com/pimterry/https-is-not-enough"
+    }
   },
   {
     "title": "Microservice Pipeline Architecture at Agile Turkey",
