@@ -51,6 +51,10 @@ header .description {
     width: auto;
 }
 
+header .description br {
+    display: none;
+}
+
 /* Show only major content, no minor details - TODO: find a new way to include both and interleave */
 
 #major-content {
