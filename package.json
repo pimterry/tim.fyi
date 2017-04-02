@@ -28,6 +28,7 @@
     "request-promise": "^2.0.1",
     "server-components": "^0.2.0",
     "server-components-static": "^0.1.0",
+    "truncate-html": "^0.1.4",
     "twit": "^2.2.3"
   },
   "devDependencies": {

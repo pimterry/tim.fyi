@@ -1,6 +1,7 @@
 "use strict";
 
 var components = require("server-components");
+var truncateHtml = require("truncate-html");
 var moment = require("moment");
 
 var feedparser = require('feedparser-promised');
@@ -29,7 +30,7 @@ RssSource.createdCallback = function () {
                 title: item.title,
                 icon: icon,
                 timestamp: moment(item.pubDate).unix(),
-                description: item.description,
+                description: truncateHtml(item.description, 500),
                 url: item.link
             }}),
             bubbles: true
