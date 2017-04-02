@@ -9,13 +9,21 @@
     "title": "Opening Open Source with DevOps at Topconf Linz",
     "url": "http://topconf.com/linz-2017/trackevent/opening-open-source-with-devops/",
     "date": "2017/03/02",
-    "location": "Linz, Austria"
+    "location": "Linz, Austria",
+    "oembed": {
+      "root_url": "https://speakerdeck.com/oembed.json",
+      "item_url": "https://speakerdeck.com/pimterry/opening-open-source-with-devops"
+    }
   },
   {
     "title": "Promises Are So Passé at Codemotion Milan",
     "url": "http://milan2016.codemotionworld.com/",
     "datetime": "2016-11-25T12:30:00+02:00",
-    "location": "Milan, Italy"
+    "location": "Milan, Italy",
+    "oembed": {
+      "root_url": "https://youtube.com/oembed",
+      "item_url": "https://www.youtube.com/watch?v=Hn-gkM0ARZU"
+    }
   },
   {
     "title": "HTTPS Is Not Enough at Bristech conference",
@@ -23,8 +31,8 @@
     "datetime": "2016-11-03T09:30:00+00:00",
     "location": "Bristol, UK",
     "oembed": {
-        "root_url": "https://speakerdeck.com/oembed.json",
-        "item_url": "https://speakerdeck.com/pimterry/https-is-not-enough"
+      "root_url": "https://youtube.com/oembed",
+      "item_url": "https://www.youtube.com/watch?v=zPhi_fzVbh8"
     }
   },
   {
