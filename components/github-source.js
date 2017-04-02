@@ -13,9 +13,9 @@ Github.createdCallback = function () {
         token: process.env.GITHUB_TOKEN
     });
 
-    var typeFilter = this.getAttribute("type-filter");
+    var filter = JSON.parse(this.getAttribute("filter"));
     var username = this.getAttribute("username");
-    var cacheId = "github-events-" + username + "/" + typeFilter;
+    var cacheId = "github-events-" + username + "/" + JSON.stringify(filter);
 
     function getEvents() {
         var cachedEvents = cache.get(cacheId);
@@ -27,7 +27,7 @@ Github.createdCallback = function () {
                 return github.users(username).events.public.fetch({page: pageNum}).catch(() => []);
             })).then((eventPages) => {
                 var allEvents = _.flatten(eventPages);
-                var relevantEvents = allEvents.filter((event) => !typeFilter || event.type === typeFilter);
+                var relevantEvents = allEvents.filter(_.matches(filter));
 
                 cache.put(cacheId, relevantEvents, 1000 * 60 * 1);
                 return relevantEvents;
