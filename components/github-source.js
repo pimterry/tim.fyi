@@ -46,7 +46,8 @@ Github.createdCallback = function () {
             case "CreateEvent":
                 return {
                   title: `New repo: ${event.repo.name}`,
-                  subtitle: `<i class="fa fa-bolt"></i>${event.payload.description}`,
+                  subtitle: event.payload.description ?
+                    `<i class="fa fa-bolt"></i>${event.payload.description}` : '',
                   url: event.repo.url
                 };
             default:
