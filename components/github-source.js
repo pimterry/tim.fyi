@@ -43,7 +43,14 @@ Github.createdCallback = function () {
                   subtitle: `<i class="fa fa-code-fork"></i>Pull request to ${event.repo.name}`,
                   url: event.payload.pullRequest.htmlUrl
                 };
+            case "CreateEvent":
+                return {
+                  title: `New repo: ${event.repo.name}`,
+                  subtitle: `<i class="fa fa-bolt"></i>${event.payload.description}`,
+                  url: event.repo.url
+                };
             default:
+                console.log("Unrecognized event", event.type);
                 return {
                   title: "Did something on Github"
                 };
