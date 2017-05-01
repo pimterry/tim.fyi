@@ -3,7 +3,11 @@
     "title": "Hardware Hacking for Web Developers at CodeEurope Krakow",
     "url": "https://codeeurope.pl/en",
     "datetime": "2017-04-26T12:45:00+02:00",
-    "location": "Krakow, Poland"
+    "location": "Krakow, Poland",
+    "oembed": {
+      "root_url": "https://speakerdeck.com/oembed.json",
+      "item_url": "https://speakerdeck.com/pimterry/hardware-hacking-for-web-developers"
+    }
   },
   {
     "title": "Opening Open Source with DevOps at Topconf Linz",

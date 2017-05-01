@@ -1,6 +1,11 @@
 [
   {
-    "title": "HTPS is Not Enough",
+    "title": "Hardware Hacking for Web Developers",
+    "url": "https://speakerdeck.com/pimterry/hardware-hacking-for-web-developers",
+    "date": "2017/04/26"
+  },
+  {
+    "title": "HTTPS is Not Enough",
     "url": "https://speakerdeck.com/pimterry/https-is-not-enough",
     "date": "2016/11/03"
   },
