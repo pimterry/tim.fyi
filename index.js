@@ -32,7 +32,8 @@ app.get('/', function (req, res) {
     }).then((output) => {
         res.send(output);
     }).catch((error) => {
-        res.send("Panic, failed to render. " + error);
+        console.error(error, error.message, error.stack);
+        res.status(500).send("Panic, failed to render.");
     });
 });
 
