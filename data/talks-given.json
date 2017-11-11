@@ -9,7 +9,11 @@
     "title": "HTTPS Is Not Enough at Codemotion Milan",
     "url": "http://milan2017.codemotionworld.com/talk-detail/?detail=6524",
     "datetime": "2017-11-10T17:10:00+01:00",
-    "location": "Milan, Italy"
+    "location": "Milan, Italy",
+    "oembed": {
+      "root_url": "https://speakerdeck.com/oembed.json",
+      "item_url": "https://speakerdeck.com/pimterry/https-is-not-enough"
+    }
   },
   {
     "title": "Hardware Hacking for JavaScript Developers at Hackference",
