@@ -380,6 +380,13 @@ p {
     line-height: 1.3;
 }
 
+blockquote {
+    color: #666;
+    font-style: italic;
+    padding-left: 8px;
+    border-left: 2px solid #666;
+}
+
 social-media-icons .fa-twitter-square {
     color: #55ACEE;
 }
