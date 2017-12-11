@@ -28,16 +28,21 @@ var RssSource = components.newElement();
 RssSource.createdCallback = function () {
     var url = this.getAttribute("url");
     var icon = this.getAttribute("icon");
+    var sourceTitle = this.getAttribute("title");
 
     return getRss(url).then((items) => {
         this.dispatchEvent(new components.dom.CustomEvent('items-ready', {
-            items: items.map((item) => { return {
-                title: item.title,
-                icon: icon,
-                timestamp: moment(item.pubDate).unix(),
-                description: truncateHtml(item.description, 500),
-                url: item.link
-            }}),
+            items: items.map((item) => {
+                var title = (item.title && item.title.match(/\w/)) ?
+                    title : "Post on " + sourceTitle;
+                return {
+                    title: title,
+                    icon: icon,
+                    timestamp: moment(item.pubDate).unix(),
+                    description: truncateHtml(item.description, 600),
+                    url: item.link
+                };
+            }),
             bubbles: true
         }));
     });
