@@ -3,7 +3,11 @@
     "title": "Optimizing IoT with Multi-Stage Docker Builds at Docker Barcelona",
     "url": "https://www.meetup.com/docker-barcelona-spain/events/245156833/",
     "datetime": "2017-12-14T19:00:00+01:00",
-    "location": "Barcelona, Spain"
+    "location": "Barcelona, Spain",
+    "oembed": {
+      "root_url": "https://speakerdeck.com/oembed.json",
+      "item_url": "https://speakerdeck.com/pimterry/optimizing-iot-with-multi-stage-builds"
+    }
   },
   {
     "title": "Hardware Hacking for JavaScript Developers at VoxxedDays Thessaloniki",
