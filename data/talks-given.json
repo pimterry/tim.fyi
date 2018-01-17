@@ -1,5 +1,11 @@
 [
   {
+    "title": "Provision, Manage & Monitor TTN Gateways in Production with Resin.io at The Things Conference",
+    "url": "https://www.thethingsnetwork.org/conference/",
+    "datetime": "2018-02-01T14:00:00+01:00",
+    "location": "Amsterdam, Netherlands"
+  },
+  {
     "title": "Optimizing IoT with Multi-Stage Docker Builds at Docker Barcelona",
     "url": "https://www.meetup.com/docker-barcelona-spain/events/245156833/",
     "datetime": "2017-12-14T19:00:00+01:00",
