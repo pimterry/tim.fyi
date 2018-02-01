@@ -3,7 +3,11 @@
     "title": "Provision, Manage & Monitor TTN Gateways in Production with Resin.io at The Things Conference",
     "url": "https://www.thethingsnetwork.org/conference/",
     "datetime": "2018-02-01T15:45:00+01:00",
-    "location": "Amsterdam, Netherlands"
+    "location": "Amsterdam, Netherlands",
+    "oembed": {
+      "root_url": "https://speakerdeck.com/oembed.json",
+      "item_url": "https://speakerdeck.com/pimterry/provision-manage-and-monitor-gateways-in-production-with-resin-dot-io"
+    }
   },
   {
     "title": "Optimizing IoT with Multi-Stage Docker Builds at Docker Barcelona",
