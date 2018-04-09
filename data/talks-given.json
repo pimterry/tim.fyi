@@ -1,5 +1,35 @@
 [
   {
+    "title": "Modern easy IoT with JS, Docker & Resin.io at DEVit",
+    "url": "https://devitconf.org",
+    "datetime": "2018-06-10T10:00+03:00",
+    "location": "Thessaloniki, Greece"
+  },
+  {
+    "title": "Optimizing Docker for IoT with Multi-Stage Builds at CodeEurope Wrocław",
+    "url": "https://codeeurope.pl/en",
+    "datetime": "2018-04-26T16:20:00+02:00",
+    "location": "Wrocław, Poland"
+  },
+  {
+    "title": "Modern easy IoT with JS, Docker & Resin.io at CodeEurope Wrocław",
+    "url": "https://codeeurope.pl/en",
+    "datetime": "2018-04-26T09:30:00+02:00",
+    "location": "Wrocław, Poland"
+  },
+  {
+    "title": "Modern easy IoT with JS, Docker & Resin.io at CodeEurope Warsaw",
+    "url": "https://codeeurope.pl/en",
+    "datetime": "2018-04-24T14:00:00+02:00",
+    "location": "Warsaw, Poland"
+  },
+  {
+    "title": "Optimizing Docker for IoT with Multi-Stage Builds at CodeEurope Warsaw",
+    "url": "https://codeeurope.pl/en",
+    "datetime": "2018-04-24T09:00:00+02:00",
+    "location": "Warsaw, Poland"
+  },
+  {
     "title": "Provision, Manage & Monitor TTN Gateways in Production with Resin.io at The Things Conference",
     "url": "https://www.thethingsnetwork.org/conference/",
     "datetime": "2018-02-01T15:45:00+01:00",
