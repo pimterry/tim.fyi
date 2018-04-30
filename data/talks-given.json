@@ -9,7 +9,11 @@
     "title": "Optimizing Docker for IoT with Multi-Stage Builds at CodeEurope Wrocław",
     "url": "https://codeeurope.pl/en",
     "datetime": "2018-04-26T16:20:00+02:00",
-    "location": "Wrocław, Poland"
+    "location": "Wrocław, Poland",
+    "oembed": {
+      "root_url": "https://speakerdeck.com/oembed.json",
+      "item_url": "https://speakerdeck.com/pimterry/optimizing-docker-for-iot-with-multi-stage-builds"
+    }
   },
   {
     "title": "Modern easy IoT with JS, Docker & Resin.io at CodeEurope Wrocław",
