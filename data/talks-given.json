@@ -63,8 +63,8 @@
     "datetime": "2018-02-01T15:45:00+01:00",
     "location": "Amsterdam, Netherlands",
     "oembed": {
-      "root_url": "https://speakerdeck.com/oembed.json",
-      "item_url": "https://speakerdeck.com/pimterry/provision-manage-and-monitor-gateways-in-production-with-resin-dot-io"
+      "root_url": "https://youtube.com/oembed",
+      "item_url": "https://www.youtube.com/watch?v=HmzXZM57zh4"
     }
   },
   {
@@ -81,7 +81,11 @@
     "title": "Hardware Hacking for JavaScript Developers at VoxxedDays Thessaloniki",
     "url": "https://voxxeddays.com/thessaloniki/sessions/hardware-hacking-javascript-developers/",
     "datetime": "2017-11-25T12:20:00+02:00",
-    "location": "Thessaloniki, Greece"
+    "location": "Thessaloniki, Greece",
+    "oembed": {
+      "root_url": "https://youtube.com/oembed",
+      "item_url": "https://www.youtube.com/watch?v=M2k8OFjw9jQ"
+    }
   },
   {
     "title": "HTTPS Is Not Enough at Codemotion Milan",
@@ -89,15 +93,19 @@
     "datetime": "2017-11-10T17:10:00+01:00",
     "location": "Milan, Italy",
     "oembed": {
-      "root_url": "https://speakerdeck.com/oembed.json",
-      "item_url": "https://speakerdeck.com/pimterry/https-is-not-enough"
+      "root_url": "https://youtube.com/oembed",
+      "item_url": "https://www.youtube.com/watch?v=F2BFjUeU5YM"
     }
   },
   {
     "title": "Hardware Hacking for JavaScript Developers at Hackference",
     "url": "https://2017.hackference.co.uk/",
     "datetime": "2017-10-20T11:50:00+01:00",
-    "location": "Birmingham, UK"
+    "location": "Birmingham, UK",
+    "oembed": {
+      "root_url": "https://youtube.com/oembed",
+      "item_url": "https://www.youtube.com/watch?v=7jF_Erv_teU"
+    }
   },
   {
     "title": "Hardware Hacking for JavaScript Developers at BarcelonaJS",
