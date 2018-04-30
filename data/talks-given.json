@@ -6,6 +6,30 @@
     "location": "Thessaloniki, Greece"
   },
   {
+    "title": "The Cambrian Explosion of IoT at DevTalks Bucharest",
+    "url": "http://www.devtalks.ro/bucharest/",
+    "datetime": "2018-06-08T10:30:00+03:00",
+    "location": "Bucharest, Romania"
+  },
+  {
+    "title": "Modern easy IoT with Docker & Resin.io at DevTalks Bucharest",
+    "url": "http://www.devtalks.ro/bucharest/",
+    "date": "2018-06-07",
+    "location": "Bucharest, Romania"
+  },
+  {
+    "title": "Optimizing Docker for IoT with Multi-Stage Builds at DevTalks Cluj",
+    "url": "http://www.devtalks.ro/cluj/",
+    "datetime": "2018-05-16T15:15:00+03:00",
+    "location": "Cluj, Romania"
+  },
+  {
+    "title": "Modern easy IoT with Docker & Resin.io at DevTalks Cluj",
+    "url": "http://www.devtalks.ro/cluj/",
+    "date": "2018-05-15",
+    "location": "Cluj, Romania"
+  },
+  {
     "title": "Optimizing Docker for IoT with Multi-Stage Builds at CodeEurope Wrocław",
     "url": "https://codeeurope.pl/en",
     "datetime": "2018-04-26T16:20:00+02:00",
