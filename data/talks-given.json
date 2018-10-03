@@ -1,5 +1,17 @@
 [
   {
+    "title": "Build your own gateway with Resin.io and RAK wireless",
+    "url": "https://www.thethingsnetworkslovenia.org/resin-io-team/",
+    "datetime": "2018-10-04T15:00+02:00",
+    "location": "Maribor, Slovenia"
+  },
+  {
+    "title": "Modern easy IoT with Docker & Resin.io at BarcelonaJS",
+    "url": "https://www.meetup.com/BarcelonaJS/events/252025373/",
+    "datetime": "2018-07-14T15:00+02:00",
+    "location": "Barcelona, Spain"
+  },
+  {
     "title": "Modern easy IoT with JS, Docker & Resin.io at DEVit",
     "url": "https://devitconf.org",
     "datetime": "2018-06-10T10:00+03:00",
@@ -9,7 +21,11 @@
     "title": "The Cambrian Explosion of IoT at DevTalks Bucharest",
     "url": "http://www.devtalks.ro/bucharest/",
     "datetime": "2018-06-08T10:30:00+03:00",
-    "location": "Bucharest, Romania"
+    "location": "Bucharest, Romania",
+    "oembed": {
+      "root_url": "https://speakerdeck.com/oembed.json",
+      "item_url": "https://speakerdeck.com/pimterry/the-cambrian-explosion-of-iot"
+    }
   },
   {
     "title": "Modern easy IoT with Docker & Resin.io at DevTalks Bucharest",
@@ -21,7 +37,11 @@
     "title": "Optimizing Docker for IoT with Multi-Stage Builds at DevTalks Cluj",
     "url": "http://www.devtalks.ro/cluj/",
     "datetime": "2018-05-16T15:15:00+03:00",
-    "location": "Cluj, Romania"
+    "location": "Cluj, Romania",
+    "oembed": {
+      "root_url": "https://youtube.com/oembed",
+      "item_url": "https://www.youtube.com/watch?v=6rB2sB9Jo5A&t=124"
+    }
   },
   {
     "title": "Modern easy IoT with Docker & Resin.io at DevTalks Cluj",

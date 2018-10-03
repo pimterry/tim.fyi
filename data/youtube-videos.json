@@ -1,5 +1,10 @@
 [
   {
+    "title": "Optimizing Docker for IoT with Multi-Stage Builds at DevTalks Cluj",
+    "url": "https://www.youtube.com/watch?v=6rB2sB9Jo5A&t=2m4s",
+    "date": "2018/05/16"
+  },
+  {
     "title": "Provision, Manage & Monitor TTN Gateways in Production with Resin.io",
     "url": "https://www.youtube.com/watch?v=HmzXZM57zh4",
     "date": "2018/02/01"
