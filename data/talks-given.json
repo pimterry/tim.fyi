@@ -3,7 +3,11 @@
     "title": "Build your own gateway with Resin.io and RAK wireless",
     "url": "https://www.thethingsnetworkslovenia.org/resin-io-team/",
     "datetime": "2018-10-04T15:00+02:00",
-    "location": "Maribor, Slovenia"
+    "location": "Maribor, Slovenia",
+    "oembed": {
+      "root_url": "https://speakerdeck.com/oembed.json",
+      "item_url": "https://speakerdeck.com/pimterry/build-your-own-ttn-gateway-with-resin-dot-io-and-rak-wireless"
+    }
   },
   {
     "title": "Modern easy IoT with Docker & Resin.io at BarcelonaJS",
