@@ -31,13 +31,16 @@ OembedItemWrapper.createdCallback = function () {
                         url: item.url
                     })
                 }
+            }).catch((e) => {
+                console.error(`Failed to oembed ${item.url}: ${e}`);
+                return undefined;
             });
         })).then((items) => {
             this.parentElement.dispatchEvent(new components.dom.CustomEvent('items-ready', {
-                items: items,
+                items: items.filter(i => !!i), // Filter out undefined results (errors)
                 bubbles: true
             }));
-        }).catch((x) => console.error(`Failed to oembed: ${x}`));
+        });
     });
 };
 
