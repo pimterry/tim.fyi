@@ -40,7 +40,9 @@ RssSource.createdCallback = function () {
                     title: title,
                     icon: icon,
                     timestamp: moment(item.pubDate).unix(),
-                    description: truncateHtml(item.description, 600),
+                    description: truncateHtml(item.description, 350, {
+                        excludes: ['svg']
+                    }),
                     url: item.link
                 };
             }),
