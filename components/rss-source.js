@@ -33,8 +33,9 @@ RssSource.createdCallback = function () {
     return getRss(url).then((items) => {
         this.dispatchEvent(new components.dom.CustomEvent('items-ready', {
             items: items.map((item) => {
-                var title = (item.title && item.title.match(/\w/)) ?
-                    title : "Post on " + sourceTitle;
+                var title = (item.title && item.title.match(/\w/))
+                    ? item.title
+                    : "Post on " + sourceTitle;
                 return {
                     title: title,
                     icon: icon,
