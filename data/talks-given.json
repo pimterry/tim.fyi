@@ -267,11 +267,7 @@
     "title": "Microservice Pipeline Architecture at Voxxed Days Bristol",
     "url": "https://voxxeddays.com/bristol16/2016/01/10/microservice-pipeline-architecture/",
     "date": "2016/02/25",
-    "location": "Bristol, UK",
-    "oembed": {
-      "root_url": "https://youtube.com/oembed",
-      "item_url": "https://www.youtube.com/watch?v=FxPfLKa8R1w"
-    }
+    "location": "Bristol, UK"
   },
   {
     "title": "Your Web Stack Would Betray You In An Instant at Topconf Linz",
