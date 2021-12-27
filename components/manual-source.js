@@ -9,7 +9,7 @@ var getOembed = require("../get-oembed");
 
 function includeOembed(item) {
     if (item.oembed) {
-        return getOembed(item.oembed.root_url, item.oembed.item_url, 350).then((oembed) => {
+        return getOembed(item.oembed.root_url, item.oembed.item_url, 350, 800).then((oembed) => {
             return _.merge(item, { description: oembed.html });
         });
     } else {

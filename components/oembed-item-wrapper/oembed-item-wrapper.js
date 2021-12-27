@@ -1,20 +1,21 @@
 "use strict";
 
-var fs = require("fs");
-var components = require("server-components");
-var componentsStatic = require("server-components-static");
-var mustache = require("mustache");
+const fs = require("fs");
+const components = require("server-components");
+const componentsStatic = require("server-components-static");
+const mustache = require("mustache");
 
-var getOembed = require("../../get-oembed");
+const getOembed = require("../../get-oembed");
 
-var oembedItemHtml = fs.readFileSync(__dirname + "/oembed-item.html", 'utf8');
+const oembedItemHtml = fs.readFileSync(__dirname + "/oembed-item.html", 'utf8');
 
-var OembedItemWrapper = components.newElement();
+const OembedItemWrapper = components.newElement();
 OembedItemWrapper.createdCallback = function () {
     componentsStatic.includeScript(this.ownerDocument, "/oembed-item.js");
 
-    var oembedUrl = this.getAttribute("url");
-    var height = this.getAttribute("height") || 200;
+    const oembedUrl = this.getAttribute("url");
+    const height = this.getAttribute("height") || 200;
+    const width = this.getAttribute("width") || (height * 3);
 
     // No errors are caught within this listener, because we have no promises out
     // Need an async approach so we can wait on this wrapper's completion
@@ -22,7 +23,7 @@ OembedItemWrapper.createdCallback = function () {
         itemsEvent.stopPropagation();
 
         return Promise.all(itemsEvent.items.map((item) => {
-            return getOembed(oembedUrl, item.url, height).then((oembedData) => {
+            return getOembed(oembedUrl, item.url, height, width).then((oembedData) => {
                 return {
                     timestamp: item.timestamp,
                     html: mustache.render(oembedItemHtml, {

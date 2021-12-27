@@ -1,10 +1,10 @@
-var cache = require("memory-cache");
-var request = require("request-promise");
+const cache = require("memory-cache");
+const request = require("request-promise");
 
-module.exports = function getOembed(oembedUrl, itemUrl, height) {
-    var url = `${oembedUrl}?url=${itemUrl}&maxheight=${height}`;
+module.exports = function getOembed(oembedUrl, itemUrl, height, width) {
+    const url = `${oembedUrl}?url=${itemUrl}&maxheight=${height}&maxwidth=${width}`;
 
-    var cachedResult = cache.get(url);
+    const cachedResult = cache.get(url);
     if (cachedResult) return Promise.resolve(cachedResult);
     else {
         return request({
