@@ -26,6 +26,7 @@ app.use(helmet());
 
 app.get('/', function (req, res) {
     res.set("Strict-Transport-Security", "max-age=31556926");
+    res.set('Cache-Control', 'max-age=600, stale-while-revalidate=3600');
 
     readFile("index.html").then((html) => {
         return components.renderPage(html);
