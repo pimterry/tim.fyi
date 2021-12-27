@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jshint . || exit 1",
     "dev": "nodemon -e js,html --exec npm run devstart",
-    "devstart": "npm test && node index.js",
+    "devstart": "node index.js",
     "start": "forever index.js"
   },
   "author": "Tim Perry",
@@ -32,7 +31,6 @@
     "twit": "^2.2.3"
   },
   "devDependencies": {
-    "jshint": "^2.9.1",
     "nodemon": "^1.9.1"
   },
   "engines": {
