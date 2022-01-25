@@ -24,6 +24,15 @@ var app = express();
 app.use(express.static('static'));
 app.use(helmet());
 
+app.use (function (req, res, next) {
+    // Redirect plaintext HTTP to HTTPS:
+    if (req.get("X-Forwarded-Proto") === "http") {
+        res.redirect('https://' + req.headers.host + req.url);
+    } else {
+        next();
+    }
+});
+
 app.get('/', function (req, res) {
     res.set("Strict-Transport-Security", "max-age=31556926");
     res.set('Cache-Control', 'max-age=600, stale-while-revalidate=3600');
