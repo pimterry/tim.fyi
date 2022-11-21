@@ -42,10 +42,10 @@ Twitter.createdCallback = function () {
             }, tweet.text);
 
             return {
-                icon: "twitter",
+                icon: "fa-brands fa-twitter",
                 title: tweetText,
                 timestamp: moment(tweet.created_at, 'dd MMM DD HH:mm:ss ZZ YYYY', 'en').unix(),
-                subtitle: `<i class="fa fa-twitter"></i>
+                subtitle: `<i class="fa-brands fa-twitter icon"></i>
                            <a href="https://twitter.com/pimterry/status/${tweet.id_str}">View on Twitter</a>`,
                 location: tweet.place? tweet.place.full_name : undefined
             };

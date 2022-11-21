@@ -1,6 +1,6 @@
 {{#items}}
 <div class="feed-item {{#future}}future-item{{/future}}">
-    <i class="fa fa-{{icon}} icon"></i>
+    <i class="{{icon}} icon"></i>
 
     <div class="outline">
       {{#url}}
@@ -11,11 +11,11 @@
       {{/url}}
 
       <div class="metadata">
-          <div class="relative-time"><i class="fa fa-clock-o"></i> {{relativeTime}}</div>
+          <div class="relative-time"><i class="fa-regular fa-clock icon"></i> {{relativeTime}}</div>
 
           {{#location}}
             <div class="location">
-              <i class="fa fa-map-marker"></i>
+              <i class="fa-solid fa-location-dot icon"></i>
               {{& location}}
             </div>
           {{/location}}

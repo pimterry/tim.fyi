@@ -272,6 +272,11 @@ oembed-item .caption {
     margin-top: 3px;
 }
 
+#minor-events .feed-item .metadata .icon {
+    font-size: inherit;
+    margin: 1px 5px 0 0;
+}
+
 #minor-events .feed-item {
     background-color: rgba(20,20,20,0.7);
     border: solid 1px rgba(0,0,0,0.3);
@@ -315,6 +320,10 @@ oembed-item .caption {
 
 #major-content .feed-item .metadata > * {
     display: block;
+}
+
+#major-content .feed-item .metadata .icon {
+    float: none;
 }
 
 .feed-item .title {
@@ -387,11 +396,11 @@ blockquote {
     border-left: 2px solid #666;
 }
 
-social-media-icons .fa-twitter-square {
+social-media-icons .fa-square-twitter {
     color: #55ACEE;
 }
 
-social-media-icons .fa-linkedin-square {
+social-media-icons .fa-linkedin {
     color: #0077B5;
 }
 

@@ -40,14 +40,14 @@ Github.createdCallback = function () {
             case "PullRequestEvent":
                 return {
                   title: event.payload.pullRequest.title,
-                  subtitle: `<i class="fa fa-code-fork"></i>Pull request to ${event.repo.name}`,
+                  subtitle: `<i class="fa-solid fa-code-branch icon"></i>Pull request to ${event.repo.name}`,
                   url: event.payload.pullRequest.htmlUrl
                 };
             case "CreateEvent":
                 return {
                   title: `New repo: ${event.repo.name}`,
                   subtitle: event.payload.description ?
-                    `<i class="fa fa-bolt"></i>${event.payload.description}` : '',
+                    `<i class="fa-solid fa-bolt icon"></i>${event.payload.description}` : '',
                   url: `https:\/\/github.com/${event.repo.name}`
                 };
             default:
@@ -61,7 +61,7 @@ Github.createdCallback = function () {
     return getEvents().then((events) => {
         var items = events.map((event) => {
             return _.merge({
-                icon: "github",
+                icon: "fa-brands fa-github",
                 timestamp: moment(event.createdAt, "dd MMM DD YYYY HH:mm:ss ZZ").unix()
             }, eventDetails(event));
         });
