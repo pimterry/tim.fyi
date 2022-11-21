@@ -27,7 +27,7 @@ var icons = [
 SocialMediaIcons.createdCallback = function () {
     componentsStatic.includeCSS(this.ownerDocument, "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
 
-    var iconToHtml = (icon) => `<a href="${icon.url(this.getAttribute(icon.name))}"><i class="fa-brands fa-${icon.icon}"></i></a>`;
+    var iconToHtml = (icon) => `<a href="${icon.url(this.getAttribute(icon.name))}" rel="me"><i class="fa-brands fa-${icon.icon}"></i></a>`;
 
     this.innerHTML = icons.filter((icon) => this.hasAttribute(icon.name))
                           .map((icon) => iconToHtml(icon))
