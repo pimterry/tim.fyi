@@ -1,18 +1,18 @@
 "use strict";
 
-var components = require("server-components");
-var truncateHtml = require("truncate-html");
-var moment = require("moment");
+const components = require("server-components");
+const truncateHtml = require("truncate-html");
+const moment = require("moment");
 
-var feedparser = require('feedparser-promised');
-var cache = require("memory-cache");
+const FeedReader = require('feed-reader');
+const cache = require("memory-cache");
 
 function getRss(url) {
-    var cachedResult = cache.get(url);
+    const cachedResult = cache.get(url);
 
     if (cachedResult) return Promise.resolve(cachedResult);
     else {
-        return feedparser.parse(url)
+        return FeedReader.read(url, { descriptionMaxLen: 1000 })
         .catch((e) => {
             console.error('Feed error from ' + url, e)
             return [];
@@ -24,22 +24,23 @@ function getRss(url) {
     }
 }
 
-var RssSource = components.newElement();
+const RssSource = components.newElement();
 RssSource.createdCallback = function () {
-    var url = this.getAttribute("url");
-    var icon = this.getAttribute("icon");
-    var sourceTitle = this.getAttribute("title");
+    const url = this.getAttribute("url");
+    const icon = this.getAttribute("icon");
+    const sourceTitle = this.getAttribute("title");
 
-    return getRss(url).then((items) => {
+    return getRss(url).then((feed) => {
         this.dispatchEvent(new components.dom.CustomEvent('items-ready', {
-            items: items.map((item) => {
-                var title = (item.title && item.title.match(/\w/))
+            items: feed.entries.map((item) => {
+                const title = (item.title && item.title.match(/\w/))
                     ? item.title
                     : "Post on " + sourceTitle;
+
                 return {
                     title: title,
                     icon: icon,
-                    timestamp: moment(item.pubDate).unix(),
+                    timestamp: moment(item.published).unix(),
                     description: truncateHtml(item.description, 350, {
                         excludes: ['svg']
                     }),
