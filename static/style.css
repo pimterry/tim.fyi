@@ -404,6 +404,14 @@ social-media-icons .fa-linkedin {
     color: #0077B5;
 }
 
+social-media-icons .fa-square-reddit {
+    color: #FF5700;
+}
+
+social-media-icons .fa-mastodon {
+    color: #6364FF;
+}
+
 social-media-icons > a:hover > .fa {
     color: #285fa3;
 }

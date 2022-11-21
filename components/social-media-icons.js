@@ -15,6 +15,7 @@ var _ = require("lodash");
 var SocialMediaIcons = components.newElement();
 
 var icons = [
+    { name: "mastodon", "icon": "mastodon",        "url": (address) =>  `https://${address}` },
     { name: "facebook", "icon": "square-facebook", "url": (username) => `https://www.facebook.com/${username}` },
     { name: "twitter",  "icon": "square-twitter",  "url": (username) => `https://twitter.com/${username}` },
     { name: "medium",   "icon": "medium",          "url": (username) => `https://medium.com/@${username}` },
