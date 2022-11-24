@@ -23,8 +23,12 @@ Github.createdCallback = function () {
         if (cachedEvents) return Promise.resolve(cachedEvents);
         else {
             return Promise.all(_.range(1, 10).map((pageNum) => {
-                // Note the catch() - we just skip any pages we can't successfully load
-                return github.users(username).events.public.fetch({page: pageNum}).catch(() => []);
+                return github.users(username).events.public.fetch({
+                    page: pageNum,
+                    per_page: 100
+                })
+                // We just skip any pages we can't successfully load:
+                .catch(() => []);
             })).then((eventPages) => {
                 var allEvents = _.flatten(eventPages);
                 var relevantEvents = allEvents.filter(_.matches(filter));
