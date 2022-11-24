@@ -11,6 +11,12 @@
       {{/url}}
 
       <div class="metadata">
+          {{#subtitle}}
+            <div class="subtitle">
+              {{& subtitle}}
+            </div>
+          {{/subtitle}}
+
           <div class="relative-time"><i class="fa-regular fa-clock icon"></i> {{relativeTime}}</div>
 
           {{#location}}
@@ -19,12 +25,6 @@
               {{& location}}
             </div>
           {{/location}}
-
-          {{#subtitle}}
-            <div class="subtitle">
-              {{& subtitle}}
-            </div>
-          {{/subtitle}}
       </div>
     </div>
 
