@@ -84,6 +84,8 @@ document.createElement("oembed-item-wrapper");
     <item-feed count=25>
         <github-source  username="pimterry" filter='{ "type": "PullRequestEvent", "payload": { "action" : "opened" } }' />
         <github-source  username="pimterry" filter='{ "type": "CreateEvent", "payload": { "refType" : "repository" } }' />
+        <github-source  username="pimterry" filter='{ "type": "IssuesEvent", "payload": { "action": "opened" } }' />
+
         <rss-summary-source icon="fa-brands fa-mastodon" descriptionAsTitle="true" title="Mastodon" url="https://toot.cafe/@pimterry.rss" />
         <rss-summary-source icon="fa-brands fa-stack-overflow" title="Stack Overflow" url="https://stackoverflow.com/feeds/user/68051/" />
     </item-feed>

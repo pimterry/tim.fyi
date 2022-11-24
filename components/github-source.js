@@ -50,6 +50,12 @@ Github.createdCallback = function () {
                     `<i class="fa-solid fa-bolt icon"></i>${event.payload.description}` : '',
                   url: `https:\/\/github.com/${event.repo.name}`
                 };
+            case "IssuesEvent":
+                return {
+                    title: event.payload.issue.title,
+                    subtitle: `<i class="fa-brands fa-github-alt icon"></i>New issue on ${event.repo.name}`,
+                    url: event.payload.issue.htmlUrl
+                };
             default:
                 console.log("Unrecognized event", event.type);
                 return {
