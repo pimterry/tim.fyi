@@ -15,7 +15,7 @@ function getRss(url) {
         return FeedReader.read(url, { descriptionMaxLen: 1000 })
         .catch((e) => {
             console.error('Feed error from ' + url, e)
-            return [];
+            return { entries: [] };
         })
         .then((result) => {
             cache.put(url, result, 1000 * 60 * 10);
