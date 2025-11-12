@@ -9,9 +9,14 @@ var getOembed = require("../get-oembed");
 
 function includeOembed(item) {
     if (item.oembed) {
-        return getOembed(item.oembed.root_url, item.oembed.item_url, 350, 800).then((oembed) => {
-            return _.merge(item, { description: oembed.html });
-        });
+        return getOembed(item.oembed.root_url, item.oembed.item_url, 350, 800)
+            .then((oembed) => {
+                return _.merge(item, { description: oembed.html });
+            })
+            .catch((e) => {
+                console.error(`Failed to include oembed ${item.oembed.item_url}: ${e}`);
+                return null;
+            });
     } else {
         return item;
     }
@@ -25,7 +30,9 @@ ManualSource.createdCallback = function () {
     return readFile(`data/${sourceName}.json`, 'utf8').then((rawJson) => {
         var json = JSON.parse(rawJson);
         return Promise.all(json.map(includeOembed));
-    }).then((loadedItems) => {
+    }).then((items) => {
+        const loadedItems = items.filter(i => !!i);
+
         this.dispatchEvent(new components.dom.CustomEvent('items-ready', {
             items: loadedItems.map((item) => {
                 var datetime = item.datetime ? moment(item.datetime) : moment(item.date, "YYYY/MM/DD");
