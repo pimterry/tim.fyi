@@ -17,30 +17,33 @@ OembedItemWrapper.createdCallback = function () {
     const height = this.getAttribute("height") || 200;
     const width = this.getAttribute("width") || (height * 3);
 
-    // No errors are caught within this listener, because we have no promises out
-    // Need an async approach so we can wait on this wrapper's completion
-    this.addEventListener("items-ready", (itemsEvent) => {
-        itemsEvent.stopPropagation();
+    // Return a promise that resolves once the child source's items have been
+    // enriched with oEmbed data and re-dispatched to the parent element.
+    return new Promise((resolveWrapper) => {
+        this.addEventListener("items-ready", (itemsEvent) => {
+            itemsEvent.stopPropagation();
 
-        return Promise.all(itemsEvent.items.map((item) => {
-            return getOembed(oembedUrl, item.url, height, width).then((oembedData) => {
-                return {
-                    timestamp: item.timestamp,
-                    html: mustache.render(oembedItemHtml, {
-                        oembed: oembedData,
-                        title: item.title,
-                        url: item.url
-                    })
-                }
-            }).catch((e) => {
-                console.error(`Failed to oembed ${item.url}: ${e}`);
-                return undefined;
+            Promise.all(itemsEvent.items.map((item) => {
+                return getOembed(oembedUrl, item.url, height, width).then((oembedData) => {
+                    return {
+                        timestamp: item.timestamp,
+                        html: mustache.render(oembedItemHtml, {
+                            oembed: oembedData,
+                            title: item.title,
+                            url: item.url
+                        })
+                    }
+                }).catch((e) => {
+                    console.error(`Failed to oembed ${item.url}: ${e}`);
+                    return undefined;
+                });
+            })).then((items) => {
+                this.parentElement.dispatchEvent(new components.dom.CustomEvent('items-ready', {
+                    items: items.filter(i => !!i),
+                    bubbles: true
+                }));
+                resolveWrapper();
             });
-        })).then((items) => {
-            this.parentElement.dispatchEvent(new components.dom.CustomEvent('items-ready', {
-                items: items.filter(i => !!i), // Filter out undefined results (errors)
-                bubbles: true
-            }));
         });
     });
 };

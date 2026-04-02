@@ -12,57 +12,54 @@
  injects component HTML (and thus executes code?).
  */
 
-var readFile = require("fs-readfile-promise");
+var fs = require("fs");
 var components = require("server-components");
 var mustache = require("mustache");
 var moment = require("moment");
 var _ = require("lodash");
 
-readFile(__dirname + "/item-feed.html", 'utf8').then((rawHtml) => {
-    var ItemFeed = components.newElement();
+var rawHtml = fs.readFileSync(__dirname + "/item-feed.html", 'utf8');
 
-    ItemFeed.createdCallback = function () {
-        var items = [];
-        var count = this.getAttribute("count") || Infinity;
-        var futureCount = this.getAttribute("future-count") || Infinity;
+var ItemFeed = components.newElement();
 
-        var feedContentNode = this.ownerDocument.createElement("div");
-        feedContentNode.classList.add("feed-content");
-        this.insertBefore(feedContentNode, this.firstChild);
+ItemFeed.createdCallback = function () {
+    var items = [];
+    var count = this.getAttribute("count") || Infinity;
+    var futureCount = this.getAttribute("future-count") || Infinity;
 
-        this.addEventListener("items-ready", (itemsReadyEvent) => {
-            items = _(items).concat(itemsReadyEvent.items).sortBy((item) => item.timestamp).reverse();
+    var feedContentNode = this.ownerDocument.createElement("div");
+    feedContentNode.classList.add("feed-content");
+    this.insertBefore(feedContentNode, this.firstChild);
 
-            var now = moment().unix();
-            var futureOrPastItems = items.partition((item) => item.timestamp > now).value();
-            var itemsToShow = _(futureOrPastItems[0]).takeRight(futureCount)
-                                                     .concat(futureOrPastItems[1])
-                                                     .take(count);
+    this.addEventListener("items-ready", (itemsReadyEvent) => {
+        items = _(items).concat(itemsReadyEvent.items).sortBy((item) => item.timestamp).reverse();
 
-            feedContentNode.innerHTML = mustache.render(rawHtml, {
-                items: itemsToShow.map((item) => {
-                    var timestamp = item.timestamp;
-                    var time = moment(timestamp, "X");
-                    var relativeTime = time.fromNow();
-                    relativeTime = relativeTime.charAt(0).toUpperCase() + relativeTime.slice(1);
+        var now = moment().unix();
+        var futureOrPastItems = items.partition((item) => item.timestamp > now).value();
+        var itemsToShow = _(futureOrPastItems[0]).takeRight(futureCount)
+                                                 .concat(futureOrPastItems[1])
+                                                 .take(count);
 
-                    return {
-                        relativeTime,
-                        url: item.url,
-                        icon: item.icon,
-                        description: item.description,
-                        title: item.title,
-                        subtitle: item.subtitle,
-                        location: item.location,
-                        future: timestamp > now
-                    };
-                }).value()
-            });
+        feedContentNode.innerHTML = mustache.render(rawHtml, {
+            items: itemsToShow.map((item) => {
+                var timestamp = item.timestamp;
+                var time = moment(timestamp, "X");
+                var relativeTime = time.fromNow();
+                relativeTime = relativeTime.charAt(0).toUpperCase() + relativeTime.slice(1);
+
+                return {
+                    relativeTime,
+                    url: item.url,
+                    icon: item.icon,
+                    description: item.description,
+                    title: item.title,
+                    subtitle: item.subtitle,
+                    location: item.location,
+                    future: timestamp > now
+                };
+            }).value()
         });
+    });
+};
 
-        // TODO: Should this have a promise and wait for the expected
-        // responses, instead of sources promise to return some data?
-    };
-
-    components.registerElement("item-feed", { prototype: ItemFeed });
-}).catch((e) => console.log(e));
+components.registerElement("item-feed", { prototype: ItemFeed });

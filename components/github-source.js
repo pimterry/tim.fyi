@@ -43,7 +43,7 @@ Github.createdCallback = function () {
         switch (event.type) {
             case "PullRequestEvent":
                 return {
-                  title: event.payload.pullRequest.title || `Pull request to ${event.repo.name}`,
+                  title: event.payload.pullRequest?.title || `Pull request to ${event.repo.name}`,
                   subtitle: `<i class="fa-solid fa-code-branch icon"></i>`,
                   url: `https://github.com/${event.repo.name}/pull/${event.payload.number}`
                 };
@@ -56,9 +56,9 @@ Github.createdCallback = function () {
                 };
             case "IssuesEvent":
                 return {
-                    title: event.payload.issue.title,
+                    title: event.payload.issue?.title || `Issue on ${event.repo.name}`,
                     subtitle: `<i class="fa-brands fa-github-alt icon"></i>New issue on ${event.repo.name}`,
-                    url: event.payload.issue.htmlUrl
+                    url: event.payload.issue?.htmlUrl || `https://github.com/${event.repo.name}/issues`
                 };
             default:
                 console.log("Unrecognized event", event.type);
@@ -78,6 +78,12 @@ Github.createdCallback = function () {
 
         this.dispatchEvent(new components.dom.CustomEvent('items-ready', {
             items: items,
+            bubbles: true
+        }));
+    }).catch((e) => {
+        console.error('GitHub source error:', e);
+        this.dispatchEvent(new components.dom.CustomEvent('items-ready', {
+            items: [],
             bubbles: true
         }));
     });
