@@ -22,7 +22,7 @@ Github.createdCallback = function () {
 
         if (cachedEvents) return Promise.resolve(cachedEvents);
         else {
-            return Promise.all(_.range(1, 10).map((pageNum) => {
+            return Promise.all(_.range(1, 3).map((pageNum) => {
                 return github.users(username).events.public.fetch({
                     page: pageNum,
                     per_page: 100
