@@ -1,7 +1,6 @@
 "use strict";
 
 require("dotenv").config();
-require('newrelic');
 
 var express = require("express");
 var helmet = require("helmet");
@@ -11,13 +10,10 @@ var components = require("server-components");
 require("./components/item-feed/item-feed");
 require("./components/item-carousel/item-carousel");
 require("./components/manual-source");
-require("./components/twitter-source");
 require("./components/github-source");
 require("./components/rss-source");
 require("./components/oembed-item-wrapper/oembed-item-wrapper");
 require("./components/social-media-icons");
-require("./components/copyright-notice");
-require("./components/google-analytics");
 
 var app = express();
 

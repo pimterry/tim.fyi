@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon -e js,html --exec npm run devstart",
     "devstart": "node index.js",
-    "start": "forever index.js"
+    "start": "node index.js"
   },
   "author": "Tim Perry",
   "license": "MIT",
@@ -14,20 +14,17 @@
     "dotenv": "^2.0.0",
     "express": "^4.13.4",
     "feed-reader": "^6.1.3",
-    "forever": "^0.15.1",
     "fs-readfile-promise": "^2.0.1",
     "helmet": "^3.0.0",
     "lodash": "^4.6.1",
     "memory-cache": "^0.1.4",
     "moment": "^2.12.0",
     "mustache": "^2.2.1",
-    "newrelic": "^1.26.0",
     "octokat": "^0.4.17",
     "request-promise": "^2.0.1",
     "server-components": "^0.2.0",
     "server-components-static": "^0.1.0",
-    "truncate-html": "^1.0.3",
-    "twit": "^2.2.3"
+    "truncate-html": "^1.0.3"
   },
   "devDependencies": {
     "nodemon": "^1.9.1"

@@ -1,6 +1,6 @@
 # fly.toml file generated for timfyi on 2021-12-27T15:23:38+01:00
 
-app = "timfyi"
+app = "tim-fyi"
 
 kill_signal = "SIGINT"
 kill_timeout = 5
